@@ -9,10 +9,9 @@ public class FakeDataFactory {
 	public static String getCLAWebStartPageUrl(){
 		
 		return "http://public-integration.cla.dsd.io/";
-//		    http://public-integration.cla.dsd.io/ (integration)
-//			http://public-demo.cla.dsd.io/ (demo)
+//	    return "http://public-demo.cla.dsd.io/";
 //			https://cla-public.service.dsd.io/ (staging)
-//			https://www.gov.uk/check-if-civil-legal-advice-can-help-you (live)
+//        return	"https://www.gov.uk/check-if-civil-legal-advice-can-help-you";
 	}
 	
 	public static String generateRandomLines(int number_of_lines, int number_of_characters_per_line) throws Exception{

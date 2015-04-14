@@ -8,7 +8,7 @@ Background:
            #And I set a valid contact number
            #And I set that the contact number is safe to save
 
-@todo
+@sprint
 Scenario Outline:  Less than 4000 characters after entering mandatory fields gives no error
 
 
@@ -21,9 +21,10 @@ Scenario Outline:  Less than 4000 characters after entering mandatory fields giv
            |1                   |
            |100                 |
            |500                 |
+           |4000                |
            |0                   |
 
-@todo
+@sprint
 Scenario Outline:  More than 4000 characters after entering mandatory fields gives no error
 
            And enter <number_of_characters> characters in the situation description
