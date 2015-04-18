@@ -21,10 +21,11 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	private By doYouReceiveBenefits_Yes = new By.ByXPath(".//*[@id='on_benefits-0']");
 	private By doYouReceiveBenefits_No = new By.ByXPath(".//*[@id='on_benefits-1']");
 	
-	private By doYouHaveChildren_Yes = new By.ByXPath(".//*[@id='have_children-0']");
-	private By doYouHaveChildren_No = new By.ByXPath(".//*[@id='have_children-1']");
+	private By doYouHaveChildrenAged15OrUnder_Yes = new By.ByXPath(".//*[@id='have_children-0']");
+	private By doYouHaveChildrenAged15OrUnder_No = new By.ByXPath(".//*[@id='have_children-1']");
 	
 	private By howManyChildren = new  By.ByXPath(".//*[@id='num_children']");
+	
 	
 	private By haveDependentChildrenOver16_Yes = new By.ByXPath(".//*[@id='have_dependants-0']");
 	private By haveDependentChildrenOver16_No = new By.ByXPath(".//*[@id='have_dependants-1']");
@@ -36,6 +37,9 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	
 	private By areYouEmployed_Yes = new By.ByXPath(".//*[@id='is_employed-0']");
 	private By areYouEmployed_No = new By.ByXPath(".//*[@id='is_employed-1']");
+	
+	private By areYouSelfEmployed_Yes = new By.ByXPath(".//*[@id='is_self_employed-0']");
+	private By areYouSelfEmployed_No = new By.ByXPath(".//*[@id='is_self_employed-1']");
 	
 	private By areYouOrYourPartnerOver60_Yes = new By.ByXPath(".//*[@id='aged_60_or_over-0']");
 	private By areYouOrYourPartnerOver60_No = new By.ByXPath(".//*[@id='aged_60_or_over-1']");
@@ -75,10 +79,28 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	}
 	
 	public void clickDoYouHaveChildren_Yes() throws Exception{
-		click(doYouHaveChildren_Yes);
+		click(doYouHaveChildrenAged15OrUnder_Yes);
+	}
+	
+	public void clickDoYouHaveChildren_No() throws Exception{
+		click(doYouHaveChildrenAged15OrUnder_No);
+	}
+	
+	public void setHowManyChildrenUnder15(String numberOfChildren) throws Exception{
+		Thread.sleep(1000);
+		setText(howManyChildren,numberOfChildren);
+	}
+	
+	public void clickHaveDependentChildrenOver16_Yes() throws Exception{
+		click(haveDependentChildrenOver16_Yes);
+	}
+	
+	public void clickHaveDependentChildrenOver16_No() throws Exception{
+		click(haveDependentChildrenOver16_No);
 	}
 	
 	public void setHowManyDependentChildrenOver16(String numberOfChildren) throws Exception{
+		Thread.sleep(1000);
 		setText(howManyDependentChildrenOver16,numberOfChildren);
 	}
 	
@@ -88,6 +110,14 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	
 	public void clickDoYouOwnAProperty_No() throws Exception{
 		click(doYouOwnAProperty_No);
+	}
+	
+	public void clickAreYouSelfEmployed_Yes() throws Exception{
+		click(areYouSelfEmployed_Yes);
+	}
+	
+	public void clickAreYouSelfEmployed_No() throws Exception{
+		click(areYouSelfEmployed_No);
 	}
 	
 	public void clickAreYouEmployed_Yes() throws Exception{
