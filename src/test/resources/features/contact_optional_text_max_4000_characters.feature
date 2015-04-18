@@ -1,7 +1,8 @@
 Feature: The max number of characters for contact situation text
 
 Background:
- 
+           
+           Giv
            Given I am on the CLA Web Contact Page
            When I enter a contact name
            And I select my preference is to call the CLA
@@ -18,11 +19,12 @@ Scenario Outline:  Less than 4000 characters after entering mandatory fields giv
 
            Examples:
            |number_of_characters|
-           |1                   |
-           |100                 |
-           |500                 |
-           |4000                |
-           |0                   |
+           #|1                   |
+           #|100                 |
+           #|500                 |
+           |3999                 |
+           |4000                 |
+           #|0                   |
 
 @sprint
 Scenario Outline:  More than 4000 characters after entering mandatory fields gives no error

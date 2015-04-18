@@ -7,11 +7,15 @@ package uk.gov.justice.digital.cla.factories;
 public class FakeDataFactory {
 	
 	public static String getCLAWebStartPageUrl(){
-		
-		return "http://public-integration.cla.dsd.io/";
+//		return "http://172.22.5.112:5000";
+		return "http://public-demo.cla.dsd.io/";
 //	    return "http://public-demo.cla.dsd.io/";
 //			https://cla-public.service.dsd.io/ (staging)
 //        return	"https://www.gov.uk/check-if-civil-legal-advice-can-help-you";
+	}
+	
+	public static String getCLAClinicalNegligenceSearchForALegalAdvisorPageUrl(){
+		return "http://public-demo.cla.dsd.io/result/face-to-face?category=clinneg";
 	}
 	
 	public static String generateRandomLines(int number_of_lines, int number_of_characters_per_line) throws Exception{
@@ -66,6 +70,10 @@ public class FakeDataFactory {
 
 	public static String getContactNumber() throws Exception {
 		return generateRandomString(9, Mode.NUMERIC);
+	}
+
+	public static String getValidPostcode() {
+		return "sG80Lt";
 	}
 	
 }

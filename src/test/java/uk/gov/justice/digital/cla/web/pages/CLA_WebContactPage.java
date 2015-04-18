@@ -75,14 +75,19 @@ public class CLA_WebContactPage extends SeleniumPage {
 		click(submitDetails);
 	}
 
-	public void setSituationDesription(int numberOfCharacters) throws Exception {
-		setText(situationDescriptionTextBox, FakeDataFactory.generateRandomString(numberOfCharacters, Mode.ALPHANUMERIC));
+	public void setSituationDescription(String situationDescription) throws Exception {
+		setText(situationDescriptionTextBox, situationDescription);
 		
 	}
 
 	public boolean expected4000CharacterErrorTextDisplayed() throws Exception {
 		return isTextContainedInInnerText(expected4000CharacterError,
 				expected4000CharacterErrorText);
+		
+	}
+
+	public void clickPreferenceCLACallBack() throws Exception {
+		click(preferenceCallMeBackRadioButton);
 		
 	}
 

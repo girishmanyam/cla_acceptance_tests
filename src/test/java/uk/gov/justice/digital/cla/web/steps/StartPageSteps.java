@@ -13,21 +13,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Start_Page_Steps {
+public class StartPageSteps {
 	
 	private StepContext stepConText = StepContextSingleton.getInstance();
 	private WebDriver driver;
 	private JourneyFactory journeyFactory;
 
-	public Start_Page_Steps(SharedDriver driver) {
+	public StartPageSteps(SharedDriver driver) {
          this.driver = driver;
  		journeyFactory = new JourneyFactory(driver);
-	}
-	
-
-	@Given("^I am on the CLA Web Start Page$")
-	public void i_am_on_the_CLA_Web_Start_Page() throws Throwable {
-		journeyFactory.getCLAWebStartPageJourney();
 	}
 	
 	@When("^I click the start now button$")

@@ -40,6 +40,20 @@ public class JourneyFactory {
 		PageFactory.getCLAWebContactPage(driver).verifyOnPage();
 	}
 	
+	@Journey
+	public void getCLAWebClinicalNegligenceFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickClinicalNegligence();
+		PageFactory.getCLAWebProblemPage(driver).clickParentOfChildTryingToTakeIntoCareGetInTouch();
+		PageFactory.getCLAWebClinicalNegligenceFindALegalAdvisorPage(driver).verifyOnPage();
+	}	
 	
+	@Journey
+	public void getCLAWebCommunityCareFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickCommunityCare();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebCommunityCareFindALegalAdvisorPage(driver).verifyOnPage();
+	}	
 	
 }

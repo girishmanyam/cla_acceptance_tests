@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import uk.gov.justice.digital.cla.factories.ConfigurationFactory;
+import uk.gov.justice.digital.cla.step.StepContext;
+import uk.gov.justice.digital.cla.step.StepContextSingleton;
 
 
 /**
@@ -30,6 +32,9 @@ public class SharedDriver extends EventFiringWebDriver {
 				byte[] screenshot = ((TakesScreenshot) this)
 						.getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshot, "image/png");
+				StepContext stepContext = StepContextSingleton.getInstance();
+				System.out.println(stepContext.toString());
+				stepContext.reset();
 			}
 		} catch (WebDriverException somePlatformsDontSupportScreenshots) {
 			System.err
