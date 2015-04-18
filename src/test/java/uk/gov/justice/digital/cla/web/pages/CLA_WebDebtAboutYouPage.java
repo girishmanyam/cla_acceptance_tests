@@ -87,7 +87,7 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	}
 	
 	public void setHowManyChildrenUnder15(String numberOfChildren) throws Exception{
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		setText(howManyChildren,numberOfChildren);
 	}
 	
@@ -100,7 +100,7 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	}
 	
 	public void setHowManyDependentChildrenOver16(String numberOfChildren) throws Exception{
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		setText(howManyDependentChildrenOver16,numberOfChildren);
 	}
 	

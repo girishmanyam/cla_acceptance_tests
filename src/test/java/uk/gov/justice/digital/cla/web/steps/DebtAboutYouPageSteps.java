@@ -67,7 +67,7 @@ public class DebtAboutYouPageSteps {
 
 	@When("^I say I have (\\d+) children aged (\\d+) or under$")
 	public void i_say_I_have_children_aged_or_under(int numberOfChildren, int arg2) throws Throwable {
-		PageFactory.getCLAWebDebtAboutYouPage(driver).setHowManyDependentChildrenOver16( Integer.toString(numberOfChildren) );
+		PageFactory.getCLAWebDebtAboutYouPage(driver).setHowManyChildrenUnder15( Integer.toString(numberOfChildren) );
 	}
 
 	@When("^I say YES I have children aged (\\d+) or over$")
@@ -103,12 +103,12 @@ public class DebtAboutYouPageSteps {
 
 	@When("^I say NO I am not employed$")
 	public void i_say_NO_I_am_not_employed() throws Throwable {
-		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouSelfEmployed_No();
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouEmployed_No();
 	}
 
 	@When("^I say YES I am self-employed$")
 	public void i_say_YES_I_am_self_employed() throws Throwable {
-		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouEmployed_Yes();
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouSelfEmployed_Yes();
 	}
 
 	@When("^I say NO I am not self-employed$")
@@ -143,7 +143,7 @@ public class DebtAboutYouPageSteps {
 
 	@When("^I say NO I don't have valuables worth over (\\d+)$")
 	public void i_say_NO_I_don_t_have_valuables_worth_over(int arg1) throws Throwable {
-		PageFactory.getCLAWebDebtAboutYouPage(driver).clickDoYouHaveSavingsOrInvestments_No();
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickDoYouValuablesWorthOver500PoundsEach_No();
 	}
 
 	@When("^I select to get in touch$")
