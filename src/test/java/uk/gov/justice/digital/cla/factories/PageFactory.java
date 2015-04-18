@@ -7,6 +7,8 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebConfirmationPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebClinicalNegligenceFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebMentalHealthFinaALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPersonalInjuryFindLegalAdvisor;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebProblemPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPublicLawFindLegalAdvisorPage;
@@ -54,8 +56,16 @@ public class PageFactory {
 		return new CLA_WebPublicLawFindLegalAdvisorPage(driver);
 	}	
 	
-	public static CLA_WebTroubleWithThePoliceFindLegalAdvisorPage getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(WebDriver driver) {
+	public static CLA_WebTroubleWithThePoliceFindLegalAdvisorPage getCLAWebMentalHealthFinaALegalAdvisorPage(WebDriver driver) {
 		return new CLA_WebTroubleWithThePoliceFindLegalAdvisorPage(driver);
+	}
+	
+	public static CLA_WebMentalHealthFinaALegalAdvisorPage getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(WebDriver driver) {
+		return new CLA_WebMentalHealthFinaALegalAdvisorPage(driver);
+	}
+	
+	public static CLA_WebImmigrationAndAsylumFindALegalAdvisorPage getCLAWebImmigrationAndAsylumFindALegalAdvisorPage(WebDriver driver) {
+		return new CLA_WebImmigrationAndAsylumFindALegalAdvisorPage(driver);
 	}
 		
 	public static CLA_WebTellUsHowYouFeelPage getCLAWebTellUsHowYouFeelPage(WebDriver driver) {

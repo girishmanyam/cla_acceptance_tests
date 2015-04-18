@@ -24,6 +24,36 @@ public class StartPageSteps {
  		journeyFactory = new JourneyFactory(driver);
 	}
 	
+	@When("^I click the civil legal advise link$")
+	public void i_click_the_civil_legal_advise_link() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickCivilLegalAdvise();
+	}
+	
+	@When("^I click the legal aid link$")
+	public void i_click_the_legal_aid_link() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickLegalAid();
+	}
+	
+	@When("^I click how this service protects your privacy link$")
+	public void i_click_how_this_service_protects_your_privacy() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickHowThisServiceProtectsYourPrivacy();
+	}
+	
+	@When("^I click the northern ireland legal aid link$")
+	public void i_click_the_northern_ireland_legal_aid_link() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickNorthernIrelandLegalAidLink();
+	}
+	
+	@When("^I click the scotland legal aid link$")
+	public void i_click_the_scotland_legal_aid_link() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickScotlandLegalAid();
+	}
+	
+	@When("^I click the criminal legal aid link$")
+	public void i_click_the_criminal_legal_aid_link() throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).clickCriminalLegalAid();
+	}
+	
 	@When("^I click the start now button$")
 	public void i_click_the_start_now_button() throws Throwable {
 	    PageFactory.getCLAWebStartPage(driver).clickStartNow();

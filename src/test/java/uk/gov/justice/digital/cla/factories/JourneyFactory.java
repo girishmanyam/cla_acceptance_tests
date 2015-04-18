@@ -56,4 +56,44 @@ public class JourneyFactory {
 		PageFactory.getCLAWebCommunityCareFindALegalAdvisorPage(driver).verifyOnPage();
 	}	
 	
+	@Journey
+	public void getCLAWebMentalHealthFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickMentalHealth();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebMentalHealthFinaALegalAdvisorPage(driver).verifyOnPage();
+	}	
+	
+	@Journey
+	public void getCLAWebImmigrationAndAsylumFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickImmigrationAndAsylum();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebImmigrationAndAsylumFindALegalAdvisorPage(driver).verifyOnPage();
+	}	
+	
+	@Journey
+	public void getCLAWebPersonalInjuryFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickPersonalInjury();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebPersonalInjuryFindLegalAdvisor(driver).verifyOnPage();
+	}
+	
+	@Journey
+	public void getCLAWebPublicLawFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickPublicLaw();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebPublicLawFindLegalAdvisorPage(driver).verifyOnPage();
+	}
+	
+	@Journey
+	public void getCLAWebTroubleWithThePoliceFindLegalAdvisorPageJourney() throws Exception{	
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickTroubleWithThePolice();
+		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
+		PageFactory.getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(driver).verifyOnPage();
+	}
+	
 }
