@@ -3,6 +3,7 @@ package uk.gov.justice.digital.cla.web.steps;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import uk.gov.justice.digital.cla.factories.JourneyFactory;
 import uk.gov.justice.digital.cla.factories.PageFactory;
@@ -10,13 +11,13 @@ import uk.gov.justice.digital.cla.step.StepContext;
 import uk.gov.justice.digital.cla.step.StepContextSingleton;
 import uk.gov.justice.digital.cla.webdriver.SharedDriver;
 
-public class IncomeSteps {
+public class IncomePageSteps {
 
 	private StepContext stepContext = StepContextSingleton.getInstance();
 	private WebDriver driver;
 	private JourneyFactory journeyFactory;
 
-	public IncomeSteps(SharedDriver driver) {
+	public IncomePageSteps(SharedDriver driver) {
 		this.driver = driver;
 		journeyFactory = new JourneyFactory(driver);
 	}
@@ -49,6 +50,11 @@ public class IncomeSteps {
 	@When("^I say  period is \"(.*?)\" for received other income$")
 	public void i_say_period_is_for_received_other_income(String period) throws Throwable {
 		PageFactory.getCLAWebIncomePage(driver).selectAnyOtherIncomePeriodByValue(period);
+	}
+	
+	@Then("^I verify I am on the income page$")
+	public void i_verify_I_am_on_the_income_page() throws Throwable {
+		PageFactory.getCLAWebIncomePage(driver).verifyOnPage();
 	}
 	
 }

@@ -26,67 +26,171 @@ public class ContactPageSteps {
 		journeyFactory = new JourneyFactory(driver);
 	}
 
-	@When("^I enter a contact name$")
-	public void i_enter_a_contact_name() throws Throwable {
-		stepContext.setContactName(FakeDataFactory.getContactName());
-		PageFactory.getCLAWebContactPage(driver).setContactName(
-				stepContext.getContactName());
+	@When("^I enter my full name \"(.*?)\"$")
+	public void i_enter_my_full_name(String fullName) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setFullName(fullName);
 	}
 
-	@When("^I enter (\\d+) characters in the situation description$")
-	public void i_enter_characters_in_the_situation_description(int numberOfCharacters)
+	@When("^I enter my helpers full name \"(.*?)\"$")
+	public void i_enter_my_helpers_full_name(String helperFullName) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setHelperFullName(helperFullName);
+	}
+
+	@When("^I select the option \"(.*?)\" as the  relationship to me$")
+	public void i_select_the_option_as_the_relationship_to_me(String relationship)
 			throws Throwable {
-		stepContext.setSituationDescription(FakeDataFactory.generateRandomString(numberOfCharacters, Mode.ALPHANUMERIC));
-		PageFactory.getCLAWebContactPage(driver).setSituationDescription(stepContext.getSituationDescription());
+		PageFactory.getCLAWebContactPage(driver).selectHelperRelationshipByValue(relationship);
 	}
 
-	@When("^I submit details$")
-	public void i_submit_details() throws Throwable {
+	@Then("^I verify I am on the maybe eligible contact us page$")
+	public void i_verify_I_am_on_the_maybe_eligible_contact_us_page()
+			throws Throwable {
+		assertTrue(PageFactory.getCLAWebYouMightBeEligibleContactPage(driver)
+				.verifyOnPage());
+	}
+
+	@When("^I say NO to has anyone helped to fill in the form$")
+	public void i_say_NO_to_has_anyone_helped_to_fill_in_the_form()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickhasAnyoneHelpedYou_No();
+	}
+
+	@When("^I say YES to has anyone helped to fill in the form$")
+	public void i_say_YES_to_has_anyone_helped_to_fill_in_the_form()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickhasAnyoneHelpedYou_Yes();
+	}
+
+	@When("^I select I will call the cla$")
+	public void i_select_I_will_call_the_cla() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver)
+				.clickPreferenceCallCLARadioButton();
+	}
+
+	@When("^I select I wish the cla to call me back$")
+	public void i_select_I_wish_the_cla_to_call_me_back() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickPreferenceCLACallBack();
+	}
+
+	@When("^I enter a contact number \"(.*?)\"$")
+	public void i_enter_a_contact_number(String contactNumber) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setCallContactNumber(
+				contactNumber);
+	}
+
+	@When("^I say YES that it is safe to save a message$")
+	public void i_say_YES_that_it_is_safe_to_save_a_message() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickCallBackSafeToSave_Yes();
+	}
+
+	@When("^I say NO that it is not safe to save a message$")
+	public void i_say_NO_that_it_is_not_safe_to_save_a_message()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickCallBackSafeToSave_No();
+	}
+
+	@When("^I select option (\\d+) for the day to call$")
+	public void i_select_option_for_the_day_to_call(int index) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).selectDayToBeCalled(index);
+	}
+
+	@When("^I select option (\\d+) for the time to call$")
+	public void i_select_option_for_the_time_to_call(int index)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).selectTimeToBeCalled(index);
+	}
+
+	@When("^I enter a postcode \"(.*?)\"$")
+	public void i_enter_a_postcode(String postcode) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setPostcode(postcode);
+	}
+
+	@When("^I select option (\\d+) from the address list$")
+	public void i_select_option_from_the_address_list(int index)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).selectAnAddressByIndex(index);
+	}
+
+	@When("^I click find address$")
+	public void i_click_find_address() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickFindUKAddress();
+	}
+
+	@When("^I enter my street address \"(.*?)\"$")
+	public void i_enter_my_street_address(String address) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setAddressText(address);
+	}
+
+	@When("^I enter extra notes that may help \"(.*?)\"$")
+	public void i_enter_extra_notes_that_may_help(String extraNotes)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setExtraNotes(extraNotes);
+	}
+
+	@When("^I click bslwebcam for special communication need$")
+	public void i_click_bslwebcam_for_special_communication_need()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionBSLWebCam();
+	}
+
+	@When("^I click minicom for special communication need$")
+	public void i_click_minicom_for_special_communication_need()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionMiniCom();
+	}
+
+	@When("^I click text relay for special communication need$")
+	public void i_click_text_relay_for_special_communication_need()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionTextRelay();
+	}
+
+	@When("^I click welsh for special communication need$")
+	public void i_click_welsh_for_special_communication_need() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionWelsh();
+	}
+
+	@When("^I click other language for special communication need$")
+	public void i_click_other_language_for_special_communication_need()
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionOtherLanguage();
+	}
+
+	@When("^I select \"(.*?)\" language for special communication need$")
+	public void i_select_language_for_special_communication_need(String language)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver)
+				.selectAdaptionOtherLanugageByValue(language);
+	}
+
+	@When("^I select other special communication needs$")
+	public void i_select_other_special_communication_needs() throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).clickAdaptionOther();
+	}
+
+	@When("^I enter details \"(.*?)\" for my other special communication needs$")
+	public void i_enter_details_for_my_other_special_communication_needs(
+			String needs) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setAdaptionOtherText(needs);
+	}
+
+	@When("^I click submit details$")
+	public void i_click_submit_details() throws Throwable {
 		PageFactory.getCLAWebContactPage(driver).clickSubmitDetails();
 	}
-
-	@When("^I select my preference is to call the cla$")
-	public void i_select_my_preference_is_to_call_the_CLA() throws Throwable {
-		PageFactory.getCLAWebContactPage(driver)
-		.clickPreferenceCallCLARadioButton();
-	}
-	
-	@When("^I select my preference is for cla to call me back$")
-	public void i_select_my_preference_is_for_cla_to_call_me_back() throws Throwable {
-		PageFactory.getCLAWebContactPage(driver)
-		.clickPreferenceCLACallBack();
-	}
-
-	@When("^I set a valid contact number$")
-	public void i_set_a_valid_contact_number() throws Throwable {
-		PageFactory.getCLAWebContactPage(driver)
-		.setCallBackNumber(FakeDataFactory.getContactNumber());
-	}
-
-	@When("^I set that the contact number is safe to save$")
-	public void i_set_that_the_contact_number_is_safe_to_save()
-			throws Throwable {
-		PageFactory.getCLAWebContactPage(driver).clickCallBackSaveToSave_Yes();
-	}
-	
-	@When("^I set that the contact number is not safe to save$")
-	public void i_set_that_the_contact_number_is_not_safe_to_save()
-			throws Throwable {
-		PageFactory.getCLAWebContactPage(driver).clickCallBackSaveToSave_No();
-	}
-
 
 	@Then("^I will be redirected to the CLA Web Confirmation Page$")
 	public void i_will_be_redirected_to_the_CLA_Web_Confirmation_Page()
 			throws Throwable {
-		assertTrue("Unable to reach confirmation page", PageFactory.getCLAWebConfirmationPage(driver).verifyOnPage());
+		assertTrue("Unable to reach confirmation page", PageFactory
+				.getCLAWebConfirmationPage(driver).verifyOnPage());
 	}
 
-	
 	@Then("^I will see an error that the maximum of characters has been exceeded$")
-	public void i_will_see_an_error_that_the_maximum_of_characters_has_been_exceeded() throws Throwable {
+	public void i_will_see_an_error_that_the_maximum_of_characters_has_been_exceeded()
+			throws Throwable {
 		PageFactory.getCLAWebContactPage(driver)
-		.expected4000CharacterErrorTextDisplayed();
+				.expected4000CharacterErrorTextDisplayed();
 	}
 
 }

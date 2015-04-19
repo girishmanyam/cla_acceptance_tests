@@ -150,5 +150,10 @@ public class DebtAboutYouPageSteps {
 	public void i_select_to_get_in_touch() throws Throwable {
 		PageFactory.getCLAWebDebtAboutYouPage(driver).clickGetInTouch();
 	}
+	
+	@Then("^I verify I am on the about me page$")
+	public void i_verify_I_am_on_the_about_me_page() throws Throwable {
+		PageFactory.getCLAWebDebtAboutYouPage(driver).verifyOnPage();
+	}
 
 }

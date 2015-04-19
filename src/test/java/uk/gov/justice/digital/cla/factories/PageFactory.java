@@ -11,12 +11,15 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebMentalHealthFinaALegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebOutGoingsPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPersonalInjuryFindLegalAdvisor;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebProblemPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPublicLawFindLegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebReviewPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebStartPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTellUsHowYouFeelPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTroubleWithThePoliceFindLegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebYouMightBeEligibleContactPage;
 
 
 public class PageFactory {
@@ -81,4 +84,20 @@ public class PageFactory {
 	public static CLA_WebIncomePage getCLAWebIncomePage(WebDriver driver) {
 		return new CLA_WebIncomePage(driver);
 	}	
+	
+	
+	public static CLA_WebOutGoingsPage getCLAWebOutGoingsPage(WebDriver driver) {
+		return new CLA_WebOutGoingsPage(driver);
+	}	
+	
+	
+	public static CLA_WebReviewPage getCLAWebReviewPage(WebDriver driver) {
+		return new CLA_WebReviewPage(driver);
+	}	
+	
+	
+	public static CLA_WebYouMightBeEligibleContactPage getCLAWebYouMightBeEligibleContactPage(WebDriver driver) {
+		return new CLA_WebYouMightBeEligibleContactPage(driver);
+	}	
+	
 }

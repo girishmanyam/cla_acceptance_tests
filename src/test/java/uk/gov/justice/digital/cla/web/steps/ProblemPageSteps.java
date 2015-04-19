@@ -131,4 +131,9 @@ public class ProblemPageSteps {
 	    assertTrue(PageFactory.getCLAWebCommunityCareFindALegalAdvisorPage(driver).verifyOnPage());
 	}
 	
+	@Then("^I verify I am on the problem page$")
+	public void i_verify_I_am_on_the_problem_page() throws Throwable {
+		assertTrue(PageFactory.getCLAWebProblemPage(driver).verifyOnPage());
+	}
+	
 }
