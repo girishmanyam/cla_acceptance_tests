@@ -22,9 +22,9 @@ public class OutgoingsPageSteps {
 		journeyFactory = new JourneyFactory(driver);
 	}
 	
-	@When("^I say I pay (\\d+) rent$")
-	public void i_say_I_pay_rent(int rent) throws Throwable {
-	    PageFactory.getCLAWebOutGoingsPage(driver).setRent(Integer.toString(rent));
+	@When("^I say I pay \"(.*?)\" rent$")
+	public void i_say_I_pay_rent(String rent) throws Throwable {
+	    PageFactory.getCLAWebOutGoingsPage(driver).setRent(rent);
 	}
 
 	@When("^I say the  period is \"(.*?)\" for rent payment$")
@@ -32,9 +32,9 @@ public class OutgoingsPageSteps {
 		PageFactory.getCLAWebOutGoingsPage(driver).selectRentPeriodByValue(period);
 	}
 
-	@When("^I say I pay (\\d+) maintenance$")
-	public void i_say_I_pay_maintenance(int maintenance) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).setMaintenance(Integer.toString(maintenance));
+	@When("^I say I pay \"(.*?)\" maintenance$")
+	public void i_say_I_pay_maintenance(String maintenance) throws Throwable {
+		PageFactory.getCLAWebOutGoingsPage(driver).setMaintenance(maintenance);
 	}
 
 	@When("^I say the period is \"(.*?)\" for maintenance payment$")
@@ -42,9 +42,9 @@ public class OutgoingsPageSteps {
 		PageFactory.getCLAWebOutGoingsPage(driver).selectMaintenancePeriodByValue(period);
 	}
 
-	@When("^I say I pay (\\d+) other income contribution$")
-	public void i_say_I_pay_other_income_contribution(int incomeContribution) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).setIncomeContribution(Integer.toString(incomeContribution));
+	@When("^I say I pay \"(.*?)\" other income contribution$")
+	public void i_say_I_pay_other_income_contribution(String incomeContribution) throws Throwable {
+		PageFactory.getCLAWebOutGoingsPage(driver).setIncomeContribution(incomeContribution);
 	}
 	
 	@When("^I click review my answers$")

@@ -22,19 +22,19 @@ public class IncomePageSteps {
 		journeyFactory = new JourneyFactory(driver);
 	}
 	
-	@When("^I say I received (\\d+) maintenance$")
-	public void i_say_I_received_maintenance(int maintenance) throws Throwable {
-	    PageFactory.getCLAWebIncomePage(driver).setMaintenanceReceived(Integer.toString(maintenance));
+	@When("^I say I received \"(.*?)\" maintenance$")
+	public void i_say_I_received_maintenance(String maintenance) throws Throwable {
+	    PageFactory.getCLAWebIncomePage(driver).setMaintenanceReceived(maintenance);
 	}
 	
-	@When("^I say I received (\\d+) pension$")
-	public void i_say_I_received_pension(int pension) throws Throwable {
-		PageFactory.getCLAWebIncomePage(driver).setPensionReceived(Integer.toString(pension));
+	@When("^I say I received \"(.*?)\" pension$")
+	public void i_say_I_received_pension(String pension) throws Throwable {
+		PageFactory.getCLAWebIncomePage(driver).setPensionReceived(pension);
 	}
 	
-	@When("^I say I received (\\d+) other income$")
-	public void i_say_I_received_other_income(int otherIncome) throws Throwable {
-		PageFactory.getCLAWebIncomePage(driver).setAnyOtherIncome(Integer.toString(otherIncome));
+	@When("^I say I received \"(.*?)\" other income$")
+	public void i_say_I_received_other_income(String otherIncome) throws Throwable {
+		PageFactory.getCLAWebIncomePage(driver).setAnyOtherIncome(otherIncome);
 	}
 	
 	@When("^I say the  period is \"(.*?)\" for received maintenance period$")
