@@ -22,6 +22,8 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebTellUsHowYouFeelPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTroubleWithThePoliceFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYouMightBeEligibleContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYourPropertyPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebYourSavingsPage;
 
 
 public class PageFactory {
@@ -110,4 +112,13 @@ public class PageFactory {
 		return new CLA_WebDebtYoureLikelyToGetLegalAidPage(driver);
 	}
 	
+	public static CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage getCLAWebYouAreUnlikelyToGetLegalAidContactPage(WebDriver driver){
+		return new CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage(driver);
+	}
+	
+	public static CLA_WebYourSavingsPage getCLAWebYourSavingsPage(WebDriver driver){
+		return new CLA_WebYourSavingsPage(driver);
+	}
+	
+
 }

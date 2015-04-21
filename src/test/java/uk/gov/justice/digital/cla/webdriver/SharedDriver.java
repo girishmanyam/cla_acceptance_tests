@@ -28,14 +28,13 @@ public class SharedDriver extends EventFiringWebDriver {
 	@After
 	public void close(Scenario scenario) {
 		try {
+			StepContext stepContext = StepContextSingleton.getInstance();
 			if (scenario.isFailed()) {
 				byte[] screenshot = ((TakesScreenshot) this)
 						.getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshot, "image/png");
-				StepContext stepContext = StepContextSingleton.getInstance();
-				System.out.println(stepContext.toString());
-				stepContext.reset();
 			}
+			stepContext.reset();
 		} catch (WebDriverException somePlatformsDontSupportScreenshots) {
 			System.err
 					.println(somePlatformsDontSupportScreenshots.getMessage());

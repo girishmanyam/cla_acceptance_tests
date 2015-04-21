@@ -63,4 +63,9 @@ public class StartPageSteps {
 	public void i_should_be_redirected_to_the_CLA_Web_Problem_Page() throws Throwable {
 	    assertTrue(PageFactory.getCLAWebProblemPage(driver).verifyOnPage());
 	}
+	
+	@When("^I capture the page named \"(.*?)\"$")
+	public void i_capture_the_page_named(String sFileName) throws Throwable {
+	    PageFactory.getCLAWebStartPage(driver).capturePageScreenShot(sFileName);
+	}
 }
