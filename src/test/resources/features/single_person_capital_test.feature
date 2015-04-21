@@ -1,3 +1,4 @@
+@sprint
 Feature: Single Person Capital Test
 
 Background: For Debt
@@ -17,7 +18,7 @@ Background: For Debt
    And I say NO I or my partner is over 60
    #And I capture the page named "about_you"  
 
-@todo 
+ 
 Scenario: Capital test - one income - penny over capital+equity dis
 
     And I say NO I have no savings or investments
@@ -108,7 +109,7 @@ Scenario: Capital test - one income - just savings
     When I click confirm answers    
     Then I verify I am on the maybe eligible contact us page
     
-@todo 
+
 Scenario: Capital test - one income - just savings
 
 
@@ -126,7 +127,7 @@ Scenario: Capital test - one income - just savings
     And I click continue
     Then I verify I am on the savings page
     When I say I have "8000.00" as savings
-    And I say I have "0.01" as investments
+    And I say I have "0.00" as investments
     And I click continue
     Then I verify I am on the income page
     When I say I received "0.00" maintenance
@@ -147,4 +148,4 @@ Scenario: Capital test - one income - just savings
     And I click review my answers  
     Then I verify I am on the review page
     When I click confirm answers    
-    Then I verify I am on the debt your're unlikely to get legal aid page
+    Then I verify I am on the maybe eligible contact us page
