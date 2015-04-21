@@ -9,8 +9,7 @@ public class FakeDataFactory {
 	public static String getCLAWebStartPageUrl(){
 //		return "http://172.22.5.112:5000";
 		return "http://public-demo.cla.dsd.io/";
-//	    return "http://public-demo.cla.dsd.io/";
-//			https://cla-public.service.dsd.io/ (staging)
+//		return 	"https://cla-public.service.dsd.io/";
 //        return	"https://www.gov.uk/check-if-civil-legal-advice-can-help-you";
 	}
 	
