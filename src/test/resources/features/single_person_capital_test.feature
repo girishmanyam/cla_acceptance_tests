@@ -1,4 +1,3 @@
-
 Feature: Single Person Capital Test
 
 Background: For Debt
@@ -6,8 +5,11 @@ Background: For Debt
    Given I am on the public start page
    When I click the start now button
    And I select debt
-   And I click continue
-   Then I verify I am on the about me page
+   Then I verify I am on debt scope diagnosis page
+   And I click that I own my own home
+   And I click that I am in rented accommodation
+   And I click that I am homeless
+   And I click that I owe money
    When I say NO I do not have a partner
    And I say NO I do not receive benefits
    And I say NO I have no children aged 15 or under

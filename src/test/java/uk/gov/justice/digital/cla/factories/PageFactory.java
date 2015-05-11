@@ -7,6 +7,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebConfirmationPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebClinicalNegligenceFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtAboutYouPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtScopeDiagnosisPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
@@ -120,5 +121,8 @@ public class PageFactory {
 		return new CLA_WebYourSavingsPage(driver);
 	}
 	
+	public static CLA_WebDebtScopeDiagnosisPage getCLAWebDebtScopeDiagnosisPage(WebDriver driver){
+		return new CLA_WebDebtScopeDiagnosisPage(driver);
+	}	
 
 }

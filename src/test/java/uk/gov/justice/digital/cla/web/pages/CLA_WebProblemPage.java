@@ -13,21 +13,21 @@ public class CLA_WebProblemPage extends SeleniumPage {
 			".//*[@id='content']/div[2]/article/h1");
 
 	
-	private By clinicalNegligence = new By.ByXPath(".//*[@id='categories-0']");
-	private By communityCare      = new By.ByXPath(".//*[@id='categories-1']");
-	private By debt               = new By.ByXPath(".//*[@id='categories-2']");
-	private By domesticViolence   = new By.ByXPath(".//*[@id='categories-3']");
-	private By discrimination     = new By.ByXPath(".//*[@id='categories-4']");
-	private By education          = new By.ByXPath(".//*[@id='categories-5']");
-	private By employment         = new By.ByXPath(".//*[@id='categories-6']");
-	private By family             = new By.ByXPath(".//*[@id='categories-7']");
-	private By housing            = new By.ByXPath(".//*[@id='categories-8']");
-	private By immigrationAndAsylum = new By.ByXPath(".//*[@id='categories-9']");
-	private By mentalHealth         = new By.ByXPath(".//*[@id='categories-10']");
-	private By personalInjury       = new By.ByXPath(".//*[@id='categories-11']");
-	private By publicLaw            = new By.ByXPath(".//*[@id='categories-12']");
-	private By troubleWithThePolice = new By.ByXPath(".//*[@id='categories-13']");
-	private By welfareBenefits      = new By.ByXPath(".//*[@id='categories-14']");
+	private By clinicalNegligence = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[1]/a");
+	private By communityCare      = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[2]/a");
+	private By debt               = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[3]/a");
+	private By domesticViolence   = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[4]/a");
+	private By discrimination     = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[5]/a");
+	private By education          = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[6]/a");
+	private By employment         = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[7]/a");
+	private By family             = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[8]/a");
+	private By housing            = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[9]/a");
+	private By immigrationAndAsylum = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[10]/a");
+	private By mentalHealth         = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[11]/a");
+	private By personalInjury       = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[12]/a");
+	private By publicLaw            = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[13]/a");
+	private By troubleWithThePolice = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[14]/a");
+	private By welfareBenefits      = new By.ByXPath(".//*[@id='content']/div[2]/article/div[1]/ul/li[15]/a");
 	
 	private By getInTouchLink = new By.ByXPath(".//*[@id='callback-link']");
 	private By continueButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");

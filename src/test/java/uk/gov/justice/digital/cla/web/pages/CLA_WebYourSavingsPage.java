@@ -39,5 +39,11 @@ public class CLA_WebYourSavingsPage extends SeleniumPage {
 		setText(this.investments, investments);
 	}
 	
+	public boolean verifyOnPage() throws Exception{
+		waitForPageLoaded();
+		return isTextContainedInInnerText(expectedTextOnPageSelector,
+				expectedTextOnPage);
+	}
+
 	
 }
