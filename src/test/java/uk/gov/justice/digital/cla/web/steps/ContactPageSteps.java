@@ -2,6 +2,8 @@ package uk.gov.justice.digital.cla.web.steps;
 
 import org.openqa.selenium.WebDriver;
 
+import com.gargoylesoftware.htmlunit.Page;
+
 import static org.junit.Assert.assertTrue;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -11,9 +13,12 @@ import uk.gov.justice.digital.cla.factories.FakeDataFactory;
 import uk.gov.justice.digital.cla.factories.FakeDataFactory.Mode;
 import uk.gov.justice.digital.cla.factories.JourneyFactory;
 import uk.gov.justice.digital.cla.factories.PageFactory;
+import uk.gov.justice.digital.cla.pages.PageEnum;
 import uk.gov.justice.digital.cla.step.StepContext;
 import uk.gov.justice.digital.cla.step.StepContextSingleton;
 import uk.gov.justice.digital.cla.webdriver.SharedDriver;
+
+import java.util.List;
 
 public class ContactPageSteps {
 
@@ -26,20 +31,30 @@ public class ContactPageSteps {
 		journeyFactory = new JourneyFactory(driver);
 	}
 
+	@Given("^I am on the contact us page$")
+	public void i_am_on_the_contact_us_page() throws Throwable {
+		stepContext.setPageEnum(PageEnum.CONTACT_US);
+		journeyFactory.getCLAWebGetInTouchContactPageJourney();
+		PageFactory.getCLAWebContactPage(driver).verifyOnPage();
+	}
+
 	@When("^I enter my full name \"(.*?)\"$")
 	public void i_enter_my_full_name(String fullName) throws Throwable {
 		PageFactory.getCLAWebContactPage(driver).setFullName(fullName);
 	}
 
 	@When("^I enter my helpers full name \"(.*?)\"$")
-	public void i_enter_my_helpers_full_name(String helperFullName) throws Throwable {
-		PageFactory.getCLAWebContactPage(driver).setHelperFullName(helperFullName);
+	public void i_enter_my_helpers_full_name(String helperFullName)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).setHelperFullName(
+				helperFullName);
 	}
 
 	@When("^I select the option \"(.*?)\" as the  relationship to me$")
-	public void i_select_the_option_as_the_relationship_to_me(String relationship)
-			throws Throwable {
-		PageFactory.getCLAWebContactPage(driver).selectHelperRelationshipByValue(relationship);
+	public void i_select_the_option_as_the_relationship_to_me(
+			String relationship) throws Throwable {
+		PageFactory.getCLAWebContactPage(driver)
+				.selectHelperRelationshipByValue(relationship);
 	}
 
 	@Then("^I verify I am on the maybe eligible contact us page$")
@@ -100,9 +115,17 @@ public class ContactPageSteps {
 		PageFactory.getCLAWebContactPage(driver).selectTimeToBeCalled(index);
 	}
 
-	@When("^I enter a postcode \"(.*?)\"$")
+	@When("^I enter (?:a|an invalid|a valid) postcode \"(.*?)\"$")
 	public void i_enter_a_postcode(String postcode) throws Throwable {
-		PageFactory.getCLAWebContactPage(driver).setPostcode(postcode);
+
+		stepContext.setPostcode(postcode);
+
+		if (stepContext.getPageEnum() == PageEnum.CONTACT_US)
+			PageFactory.getCLAWebContactPage(driver).setPostcode(postcode);
+		else {
+			PageFactory.getCLAWebFindALegalAdvisorPage(driver).setPostcode(
+					postcode);
+		}
 	}
 
 	@When("^I select option (\\d+) from the address list$")
@@ -111,14 +134,21 @@ public class ContactPageSteps {
 		PageFactory.getCLAWebContactPage(driver).selectAnAddressByIndex(index);
 	}
 
-	@When("^I click find address$")
-	public void i_click_find_address() throws Throwable {
+	@When("^I click find UK address$")
+	public void i_click_find_UK_address() throws Throwable {
 		PageFactory.getCLAWebContactPage(driver).clickFindUKAddress();
 	}
 
 	@When("^I enter my street address \"(.*?)\"$")
 	public void i_enter_my_street_address(String address) throws Throwable {
 		PageFactory.getCLAWebContactPage(driver).setAddressText(address);
+		stepContext.setAddressText(address);
+	}
+
+	@When("^I select the UK address:$")
+	public void i_select_the_UK_address(List<List<String>> address)
+			throws Throwable {
+		PageFactory.getCLAWebContactPage(driver).selectUKAddress(address.get(0).get(0));
 	}
 
 	@When("^I enter extra notes that may help \"(.*?)\"$")
@@ -192,5 +222,16 @@ public class ContactPageSteps {
 		PageFactory.getCLAWebContactPage(driver)
 				.expected4000CharacterErrorTextDisplayed();
 	}
+
+	@Then("^the address field text box is populated$")
+	public void the_address_field_text_box_is_populated() throws Throwable {
+		assertTrue(PageFactory.getCLAWebContactPage(driver).getAddressText().contains(stepContext.getAddressText()));
+	}
+	
+	@Then("^an error is displayed stating the postcode could not be found$")
+	public void an_error_is_displayed_stating_the_postcode_could_not_be_found() throws Throwable {
+	    assertTrue(PageFactory.getCLAWebContactPage(driver).expectedNoPostcodeFoundDisplayed());
+	}
+
 
 }

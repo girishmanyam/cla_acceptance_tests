@@ -1,10 +1,14 @@
 package uk.gov.justice.digital.cla.step;
 
+import uk.gov.justice.digital.cla.pages.PageEnum;
+
 public class StepContext {
 	
 	private String contactName = "";
 	private String situationDescription = "";
 	private String postcode = "";
+	private PageEnum pageEnum = PageEnum.UNKNOWN;
+	private String addressText = "";
 	
 	@Override
 	public String toString(){
@@ -44,6 +48,25 @@ public class StepContext {
 
 	public String getPostcode() {
 		return postcode;
+	}
+	
+
+	public void setPageEnum(PageEnum pageEnum) {
+		// TODO Auto-generated method stub
+		this.pageEnum = pageEnum;
+	}
+
+	public PageEnum getPageEnum() {
+		// TODO Auto-generated method stub
+		return pageEnum;
+	}
+
+	public String getAddressText() {
+		return addressText;
+	}
+	
+	public void setAddressText(String addressText){
+		this.addressText = addressText;
 	}
 	
 

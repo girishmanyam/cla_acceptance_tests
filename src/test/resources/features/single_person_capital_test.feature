@@ -33,6 +33,8 @@ Scenario: Capital test - one income - penny over capital+equity dis
     And I say NO I do not rent out parts of the property
     And I say NO my share of the property is not in dispute
     And I click continue
+    Then I verify I am on the review page
+    When I click confirm answers
     Then I verify I am on the debt your're unlikely to get legal aid page
 
 
@@ -70,7 +72,7 @@ Scenario: Capital test - one income - capital+equity dis exactly
     And I click review my answers  
     Then I verify I am on the review page
     When I click confirm answers 
-    Then I verify I am on the maybe eligible contact us page 
+    Then I verify I am on the debt your're likely to get legal aid page
     
 
 Scenario: Capital test - one income - just savings
