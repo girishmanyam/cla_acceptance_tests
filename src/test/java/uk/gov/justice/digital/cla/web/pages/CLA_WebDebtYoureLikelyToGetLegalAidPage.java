@@ -6,7 +6,7 @@ import uk.gov.justice.digital.cla.page.SeleniumPage;
 
 public class CLA_WebDebtYoureLikelyToGetLegalAidPage extends SeleniumPage {
 	
-	private String expectedTextOnPage = "You’re likely to get legal aid";
+	private String expectedTextOnPage = "You might qualify for legal aid";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 	

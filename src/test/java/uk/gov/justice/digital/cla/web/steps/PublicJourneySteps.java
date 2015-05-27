@@ -39,4 +39,11 @@ public class PublicJourneySteps {
 		journeyFactory.getCLAWebCommunityCareFindLegalAdvisorPageJourney();
 	}
 	
+	@Given("^I am on the public problem page$")
+	public void i_am_on_the_public_problem_page() throws Throwable {
+	    journeyFactory.getCLAWebProblemPageJourney();
+	}
+
+
+	
 }

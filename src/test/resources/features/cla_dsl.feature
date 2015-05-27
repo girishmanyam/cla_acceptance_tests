@@ -1,9 +1,11 @@
-Feature: The max number of characters for contact situation text
+Feature: DSL Language for CLA
 
 
 Scenario: Get to about you
 
+          #Given I am on the contact us page
           Given I am on the public start page
+          Given I am on the public problem page
           When I click the start now button
           Then I verify I am on the problem page
           #When I select debt

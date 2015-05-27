@@ -9,6 +9,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebClinicalNegligenceFindALegalA
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtAboutYouPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtScopeDiagnosisPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
@@ -66,12 +67,12 @@ public class PageFactory {
 		return new CLA_WebPublicLawFindLegalAdvisorPage(driver);
 	}	
 	
-	public static CLA_WebTroubleWithThePoliceFindLegalAdvisorPage getCLAWebMentalHealthFinaALegalAdvisorPage(WebDriver driver) {
-		return new CLA_WebTroubleWithThePoliceFindLegalAdvisorPage(driver);
+	public static CLA_WebMentalHealthFinaALegalAdvisorPage getCLAWebMentalHealthFinaALegalAdvisorPage(WebDriver driver) {
+		return new CLA_WebMentalHealthFinaALegalAdvisorPage(driver);
 	}
 	
-	public static CLA_WebMentalHealthFinaALegalAdvisorPage getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(WebDriver driver) {
-		return new CLA_WebMentalHealthFinaALegalAdvisorPage(driver);
+	public static CLA_WebTroubleWithThePoliceFindLegalAdvisorPage getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(WebDriver driver) {
+		return new CLA_WebTroubleWithThePoliceFindLegalAdvisorPage(driver);
 	}
 	
 	public static CLA_WebImmigrationAndAsylumFindALegalAdvisorPage getCLAWebImmigrationAndAsylumFindALegalAdvisorPage(WebDriver driver) {
@@ -121,8 +122,15 @@ public class PageFactory {
 		return new CLA_WebYourSavingsPage(driver);
 	}
 	
+
 	public static CLA_WebDebtScopeDiagnosisPage getCLAWebDebtScopeDiagnosisPage(WebDriver driver){
 		return new CLA_WebDebtScopeDiagnosisPage(driver);
 	}	
+
+	public static CLA_WebEmploymentFindLegalAdvisorPage getCLAWebEmploymentFindLegalAdvisorPage(WebDriver driver){
+		return new CLA_WebEmploymentFindLegalAdvisorPage(driver);
+	}
+
+
 
 }

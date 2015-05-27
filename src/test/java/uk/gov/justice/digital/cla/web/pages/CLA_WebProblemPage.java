@@ -44,6 +44,7 @@ public class CLA_WebProblemPage extends SeleniumPage {
 	}
 	
 	public void clickClinicalNegligence() throws Exception{
+		waitToGetElement(clinicalNegligence, HTTP_TIMEOUT);
 		click(clinicalNegligence);
 	}
 	

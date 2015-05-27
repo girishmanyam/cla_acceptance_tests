@@ -1,8 +1,12 @@
 package uk.gov.justice.digital.cla.web.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;
 
 import uk.gov.justice.digital.cla.factories.FakeDataFactory;
 import uk.gov.justice.digital.cla.factories.FakeDataFactory.Mode;
@@ -53,17 +57,25 @@ public class CLA_WebContactPage extends SeleniumPage {
 	
 	private By findUKAddress = new By.ByXPath(".//*[@id='field-address-post_code']/div[1]/div/button");
 	
-	private By chooseAnAddress = new By.ByXPath(".//*[@id='field-address-post_code']/div[2]/select");
+	private By selectAUKAddress = new By.ByXPath(".//*[@id='field-address-post_code']/div[2]/select");
 	
 	private By addressText = new By.ByXPath(".//*[@id='address-street_address']");
+	
+	
+	private By errorPostcodeNotFound = new By.ByXPath(".//*[@id='field-address-post_code']/div[1]/p");
+	private String expectedErrorPostcodeNotFoundText = "No addresses were found with that postcode";
 	
 	public void setAddressText(String address) throws Exception{
 		setText(addressText, address);
 	}
 	
+	public String getAddressText() throws Exception{
+		return getText(addressText);
+	}
+	
 	public void selectAnAddressByIndex(int index) throws Exception{
 		Thread.sleep(1000);
-		setSelectOptionByIndex(chooseAnAddress, index);
+		setSelectOptionByIndex(selectAUKAddress, index);
 	}
 	
 	public void clickFindUKAddress() throws Exception{
@@ -179,6 +191,13 @@ public class CLA_WebContactPage extends SeleniumPage {
 		
 	}
 
+	public boolean expectedNoPostcodeFoundDisplayed() throws Exception {
+		waitToGetElement(errorPostcodeNotFound, HTTP_TIMEOUT);
+		return isTextContainedInInnerText(errorPostcodeNotFound,
+				expectedErrorPostcodeNotFoundText);
+		
+	}
+	
 	public void clickPreferenceCLACallBack() throws Exception {
 		click(preferenceCallMeBackRadioButton);
 		
@@ -187,6 +206,18 @@ public class CLA_WebContactPage extends SeleniumPage {
 	public void setPostcode(String postcode) throws Exception {
 		setText(postcodeText,postcode);
 		
+	}
+	
+	public void selectUKAddress(String address) throws Exception{
+		waitToGetElement(selectAUKAddress, HTTP_TIMEOUT);
+		Select se = new Select(driver.findElement(selectAUKAddress));
+		List<WebElement> l = se.getOptions();
+		for (int index=0; index < l.size(); index++){
+			if (l.get(index).getText().contains(address)){
+				l.get(index).click();
+				break;
+			}
+		}
 	}
 
 
