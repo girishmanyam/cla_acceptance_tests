@@ -38,15 +38,15 @@ public class CLA_WebIncomePage extends SeleniumPage {
 	}
 	
 	public void selectMaintenancePeriodByValue(String period) throws Exception{
-		setSelectOptionByValue(maintenanceReceivedPeriod, period);
+		setSelectOptionByVisibleText(maintenanceReceivedPeriod, period);
 	}
 	
 	public void selectPensionPeriodByValue(String period) throws Exception{
-		setSelectOptionByValue(pensionReceivedPeriod, period);
+		setSelectOptionByVisibleText(pensionReceivedPeriod, period);
 	}
 	
 	public void selectAnyOtherIncomePeriodByValue(String period) throws Exception{
-		setSelectOptionByValue(anyOtherIncomePeriod, period);
+		setSelectOptionByVisibleText(anyOtherIncomePeriod, period);
 	}
 	
 	public void clickGetInTouch() throws Exception{
@@ -55,6 +55,7 @@ public class CLA_WebIncomePage extends SeleniumPage {
 	
 	public void clickContinue() throws Exception{
 		click(continueButton);
+		Thread.sleep(300);
 	}
 	
 	public CLA_WebIncomePage(WebDriver driver) {
@@ -62,6 +63,7 @@ public class CLA_WebIncomePage extends SeleniumPage {
 	}
 	
 	public boolean verifyOnPage() throws Exception{
+		Thread.sleep(500);
 		waitForPageLoaded();
 		return isTextContainedInInnerText(expectedTextOnPageSelector,
 				expectedTextOnPage);

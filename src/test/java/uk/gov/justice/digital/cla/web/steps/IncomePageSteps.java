@@ -57,4 +57,75 @@ public class IncomePageSteps {
 		PageFactory.getCLAWebIncomePage(driver).verifyOnPage();
 	}
 	
+	@When("^I say my partner receives \"(.*?)\" gross wage$")
+	public void i_say_my_partner_receives_gross_wage(String income) throws Throwable {
+	    PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerIncome(income);
+	}
+
+	@When("^I say the period is \"(.*?)\" for gross wage$")
+	public void i_say_the_period_is_for_gross_wage(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerIncomeInterval(option);
+	}
+
+	@When("^I say my partners pays \"(.*?)\" income tax$")
+	public void i_say_my_partners_pays_income_tax(String tax) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerIncomeTax(tax);
+	}
+
+	@When("^I say the period is \"(.*?)\" for income tax paid$")
+	public void i_say_the_period_is_for_income_tax_paid(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerIncomeTaxInterval(option);
+	}
+
+	@When("^I say my partners pays \"(.*?)\" national insuracnce contributions$")
+	public void i_say_my_partners_pays_national_insuracnce_contributions(String ni) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerNIContributions(ni);
+	}
+
+	@When("^I say the period is \"(.*?)\" for national insurance contributions$")
+	public void i_say_the_period_is_for_national_insurance_contributions(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerNIContributionsInterval(option);
+	}
+	
+	@When("^I say my partner receives \"(.*?)\" working tax credit$")
+	public void i_say_my_partner_receives_working_tax_credit(String credit) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerWorkingTaxCredit(credit);;
+	}
+
+	@When("^I say the period is \"(.*?)\" for working tax credit$")
+	public void i_say_the_period_is_for_working_tax_credit(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerWorkingTaxCreditInterval(option);
+	}
+
+	@When("^I say my partner receives \"(.*?)\" for maintenance$")
+	public void i_say_my_partner_receives_for_maintenance(String maintenance) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerMaintenanceReceived(maintenance);
+	}
+
+	@When("^I say the period is \"(.*?)\" for maintenance$")
+	public void i_say_the_period_is_for_maintenance(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerMaintenanceReceivedInterval(option);
+	}
+
+	@When("^I say my partner receives \"(.*?)\" from pensions$")
+	public void i_say_my_partner_receives_from_pensions(String pension) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerPensionReceived(pension);
+	}
+
+	@When("^I say the period is \"(.*?)\" for the pensions$")
+	public void i_say_the_period_is_for_the_pensions(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerPensionReceivedIntervalByText(option);
+	}
+
+	@When("^I say my partner receives \"(.*?)\" other income$")
+	public void i_say_my_partner_receives_other_income(String income) throws Throwable {
+		System.out.println("Other income");
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).setPartnerOtherIncome(income);
+	}
+
+	@When("^I say the period is \"(.*?)\" for other income$")
+	public void i_say_the_period_is_for_other_income(String option) throws Throwable {
+		PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).selectPartnerOtherIncomeIntervalByText(option);
+	}
+	
 }

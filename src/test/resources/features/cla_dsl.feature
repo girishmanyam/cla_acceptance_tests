@@ -5,16 +5,15 @@ Scenario: Get to about you
 
           #Given I am on the contact us page
           Given I am on the public start page
-          Given I am on the public problem page
+          #Given I am on the public problem page
           When I click the start now button
           Then I verify I am on the problem page
-          #When I select debt
+          When I select debt
           #When I select domestic violence
           #When I select discrimination
           #When I select education
           #When I select housing
-          When I select family
-          And I click continue
+          #And I click continue
           Then I verify I am on the about me page
           And I say YES I have a partner
           And I say YES I am in dispute with my partner
@@ -33,7 +32,11 @@ Scenario: Get to about you
           And I say YES I am employed
           And I say NO I am not employed
           And I say YES I am self-employed
+          And I say YES my partner is employed
+          And I say NO my partner is not employed
           And I say NO I am not self-employed
+          And I say YES my partner is self-employed
+          And I say NO my partner is not self-employed
           And I say YES I or my partner is over 60
           And I say NO I or my partner is over 60
           And I say YES I have savings or investments
@@ -104,5 +107,6 @@ Scenario: Get to about you
           And I click submit details
           
           
-          
-          
+
+
+

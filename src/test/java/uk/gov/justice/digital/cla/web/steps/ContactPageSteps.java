@@ -232,6 +232,12 @@ public class ContactPageSteps {
 	public void an_error_is_displayed_stating_the_postcode_could_not_be_found() throws Throwable {
 	    assertTrue(PageFactory.getCLAWebContactPage(driver).expectedNoPostcodeFoundDisplayed());
 	}
+	
+
+	@Then("^I verify I am on the contact civil legal advice page$")
+	public void i_verify_I_am_on_the_contact_civil_legal_advice_page() throws Throwable {
+		assertTrue(PageFactory.getCLAWebContactPage(driver).verifyOnPage());
+	}
 
 
 }

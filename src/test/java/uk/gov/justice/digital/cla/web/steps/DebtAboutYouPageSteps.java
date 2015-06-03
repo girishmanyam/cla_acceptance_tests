@@ -121,8 +121,8 @@ public class DebtAboutYouPageSteps {
 		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouOrYourPartnerOver60_Yes();
 	}
 
-	@When("^I say NO I or my partner is over (\\d+)$")
-	public void i_say_NO_I_or_my_partner_is_over(int arg1) throws Throwable {
+	@When("^I say NO I or my partner is under (\\d+)$")
+	public void i_say_NO_I_or_my_partner_is_under(int arg1) throws Throwable {
 		PageFactory.getCLAWebDebtAboutYouPage(driver).clickAreYouOrYourPartnerOver60_No();
 	}
 
@@ -154,6 +154,31 @@ public class DebtAboutYouPageSteps {
 	@Then("^I verify I am on the about me page$")
 	public void i_verify_I_am_on_the_about_me_page() throws Throwable {
 		PageFactory.getCLAWebDebtAboutYouPage(driver).verifyOnPage();
+	}
+	
+	@Then("^I say YES my partner is employed$")
+	public void i_say_YES_my_partner_is_employed() throws Throwable {
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickIsYourPartnerEmployed_Yes();
+	}
+
+	@Then("^I say NO my partner is not employed$")
+	public void i_say_NO_my_partner_is_not_employed() throws Throwable {
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickIsYourPartnerEmployed_No();
+	}
+
+	@Then("^I say YES my partner is self-employed$")
+	public void i_say_YES_my_partner_is_self_employed() throws Throwable {
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickIsYourPartnerSelfEmployed_Yes();
+	}
+
+	@Then("^I say NO my partner is not self-employed$")
+	public void i_say_NO_my_partner_is_not_self_employed() throws Throwable {
+		PageFactory.getCLAWebDebtAboutYouPage(driver).clickIsYourPartnerSelfEmployed_No();
+	}
+	
+	@Then("^I verify I am on you and your partners property page$")
+	public void i_verify_I_am_on_you_and_your_partners_property_page() throws Throwable {
+	    assertTrue(PageFactory.getCLAWebYouAndYouPartnersPropertyPage(driver).verifyOnPage());
 	}
 
 }

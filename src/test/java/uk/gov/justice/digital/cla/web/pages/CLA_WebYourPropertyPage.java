@@ -95,6 +95,7 @@ public class CLA_WebYourPropertyPage extends SeleniumPage {
 	}
 	
 	public void clickContinue() throws Exception{
+		Thread.sleep(200);
 		click(continueButton);
 	}
 	

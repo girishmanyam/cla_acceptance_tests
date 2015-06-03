@@ -98,5 +98,17 @@ public class FindALegalAdvisorPageSteps {
 		assertTrue(PageFactory.getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(driver)
 				.verifyOnPage());
 	}
+	
+	@Then("^I verify that a legal advisor maybe able to help$")
+	public void i_verify_that_a_legal_advisor_maybe_able_to_help() throws Throwable {
+		assertTrue(PageFactory.getCLAWebALegalAdvisorMaybeToHelpPage(driver)
+				.verifyOnPage());
+	}
+	
+	@Then("^I verify I am on the legal aid is not available for this problem page$")
+	public void i_verify_I_am_on_the_legal_aid_is_not_available_for_this_problem_page() throws Throwable {
+		assertTrue(PageFactory.getCLAWebLegalAidIsNotAvailablePage(driver)
+				.verifyOnPage());
+	}
 
 }

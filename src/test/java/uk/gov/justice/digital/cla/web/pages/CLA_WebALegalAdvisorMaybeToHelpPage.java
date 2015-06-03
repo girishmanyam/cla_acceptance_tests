@@ -5,25 +5,17 @@ import org.openqa.selenium.WebDriver;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
-public class CLA_WebReviewPage extends SeleniumPage {
+public class CLA_WebALegalAdvisorMaybeToHelpPage extends SeleniumPage{
 	
-	private String expectedTextOnPage = "Review your answers";
+	private String expectedTextOnPage = "A legal adviser may be able to help you";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 	
-	private By confirmButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
-	
-	public void clickConfirm() throws Exception{
-		click(confirmButton);
-		Thread.sleep(500);
-	}
-	
 
-	public CLA_WebReviewPage(WebDriver driver) {
+	public CLA_WebALegalAdvisorMaybeToHelpPage(WebDriver driver) {
 		super(driver);
 	}
 	
-
 	public boolean verifyOnPage() throws Exception{
 		waitForPageLoaded();
 		return isTextContainedInInnerText(expectedTextOnPageSelector,

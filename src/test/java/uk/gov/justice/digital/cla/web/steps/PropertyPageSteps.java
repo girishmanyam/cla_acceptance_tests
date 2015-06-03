@@ -106,5 +106,10 @@ public class PropertyPageSteps {
 	public void i_verify_I_am_on_the_debt_your_re_unlikely_to_get_legal_aid_page() throws Throwable {
 	    assertTrue(PageFactory.getCLAWebYouAreUnlikelyToGetLegalAidContactPage(driver).verifyOnPage());
 	}
+	
+	@Then("^I verify I am on you and your partners income page$")
+	public void i_verify_I_am_on_you_and_your_partners_income_page() throws Throwable {
+	    assertTrue(PageFactory.getCLAWebYouAndYourPartnersIncomePage(driver).verifyOnPage());
+	}
 
 }

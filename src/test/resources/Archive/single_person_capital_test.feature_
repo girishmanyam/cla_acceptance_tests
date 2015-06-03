@@ -1,3 +1,4 @@
+
 Feature: Single Person Capital Test
 
 Background: For Debt
@@ -20,7 +21,7 @@ Background: For Debt
    And I say NO I or my partner is over 60
    #And I capture the page named "about_you"  
 
-@todo  
+ 
 Scenario: Capital test - one income - penny over capital+equity dis
 
     And I say NO I have no savings or investments

@@ -121,6 +121,7 @@ public class CLA_WebProblemPage extends SeleniumPage {
 	
 	public void clickContinueButton() throws Exception{
 		click(continueButton);
+		Thread.sleep(500);
 	}
 
 	

@@ -2,17 +2,20 @@ package uk.gov.justice.digital.cla.factories;
 
 import org.openqa.selenium.WebDriver;
 
+import uk.gov.justice.digital.cla.web.pages.CLA_WebALegalAdvisorMaybeToHelpPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebCommunityCareFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebConfirmationPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebClinicalNegligenceFindALegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebDVWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtAboutYouPage;
-import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtScopeDiagnosisPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebLegalAidIsNotAvailablePage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebMentalHealthFinaALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebOutGoingsPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPersonalInjuryFindLegalAdvisor;
@@ -22,6 +25,8 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebReviewPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebStartPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTellUsHowYouFeelPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTroubleWithThePoliceFindLegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebYouAndYouPartnersPropertyPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebYouAndYourPartnersIncomePage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYouMightBeEligibleContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYourPropertyPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage;
@@ -110,6 +115,11 @@ public class PageFactory {
 		return new CLA_WebYourPropertyPage(driver);
 	}
 	
+	
+	public static CLA_WebYouAndYouPartnersPropertyPage getCLAWebYouAndYouPartnersPropertyPage(WebDriver driver) {
+		return new CLA_WebYouAndYouPartnersPropertyPage(driver);
+	}
+	
 	public static CLA_WebDebtYoureLikelyToGetLegalAidPage getCLAWebDebtYoureLikelyToGetLegalAidPage(WebDriver driver) {
 		return new CLA_WebDebtYoureLikelyToGetLegalAidPage(driver);
 	}
@@ -123,14 +133,29 @@ public class PageFactory {
 	}
 	
 
-	public static CLA_WebDebtScopeDiagnosisPage getCLAWebDebtScopeDiagnosisPage(WebDriver driver){
-		return new CLA_WebDebtScopeDiagnosisPage(driver);
+	public static CLA_WebDebtWhatDoYouNeedHelpWithPage getCLAWebDebtWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebDebtWhatDoYouNeedHelpWithPage(driver);
 	}	
 
 	public static CLA_WebEmploymentFindLegalAdvisorPage getCLAWebEmploymentFindLegalAdvisorPage(WebDriver driver){
 		return new CLA_WebEmploymentFindLegalAdvisorPage(driver);
 	}
 
+	public static CLA_WebYouAndYourPartnersIncomePage getCLAWebYouAndYourPartnersIncomePage(WebDriver driver){
+		return new CLA_WebYouAndYourPartnersIncomePage(driver);
+	}
+	
+	public static CLA_WebLegalAidIsNotAvailablePage getCLAWebLegalAidIsNotAvailablePage(WebDriver driver){
+		return new CLA_WebLegalAidIsNotAvailablePage(driver);
+	}
+	
+	public static CLA_WebALegalAdvisorMaybeToHelpPage getCLAWebALegalAdvisorMaybeToHelpPage(WebDriver driver){
+		return new CLA_WebALegalAdvisorMaybeToHelpPage(driver);
+	}
+	
+	public static CLA_WebDVWhatDoYouNeedHelpWithPage getCLAWebDVWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebDVWhatDoYouNeedHelpWithPage(driver);
+	}
 
 
 }

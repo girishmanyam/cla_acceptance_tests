@@ -1,6 +1,5 @@
 Feature: find address from postcode
 
-@sprint
 Scenario: valid postcode provides a list of addresses to select
 
 Given I am on the contact us page
@@ -11,11 +10,13 @@ And I select the UK address:
 Then the address field text box is populated
 
 
-@sprint
+
 Scenario: invalid postcode throws an error
 
 Given I am on the contact us page
 When I enter an invalid postcode "xxxxxxx"
 And I click find UK address
-Then an error is displayed stating the postcode could not be found
+Then an error is displayed stating the postcode could not be found        
+          
+
 

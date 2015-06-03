@@ -2,6 +2,7 @@ package uk.gov.justice.digital.cla.web.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By.ById;
 import org.openqa.selenium.By.ByXPath;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
@@ -38,8 +39,14 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	private By areYouEmployed_Yes = new By.ByXPath(".//*[@id='is_employed-0']");
 	private By areYouEmployed_No = new By.ByXPath(".//*[@id='is_employed-1']");
 	
+	private By isYourPartnerEmployed_Yes = new By.ByXPath(".//*[@id='partner_is_employed-0']");
+	private By isYourPartnerEmployed_No  = new By.ByXPath(".//*[@id='partner_is_employed-1']");
+	
 	private By areYouSelfEmployed_Yes = new By.ByXPath(".//*[@id='is_self_employed-0']");
 	private By areYouSelfEmployed_No = new By.ByXPath(".//*[@id='is_self_employed-1']");
+	
+	private By isYourPartnerSelfEmployed_Yes = new By.ByXPath(".//*[@id='partner_is_self_employed-0']");
+	private By isYourPartnerSelfEmployed_No = new By.ByXPath(".//*[@id='partner_is_self_employed-1']");	
 	
 	private By areYouOrYourPartnerOver60_Yes = new By.ByXPath(".//*[@id='aged_60_or_over-0']");
 	private By areYouOrYourPartnerOver60_No = new By.ByXPath(".//*[@id='aged_60_or_over-1']");
@@ -53,6 +60,22 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	private By getInTouchLink = new By.ByXPath(".//*[@id='callback-link']");
 	private By continueButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
 	
+	
+	public void clickIsYourPartnerEmployed_Yes() throws Exception{
+		click(isYourPartnerEmployed_Yes);
+	}
+	
+	public void clickIsYourPartnerEmployed_No() throws Exception{
+		click(isYourPartnerEmployed_No);
+	}
+	
+	public void clickIsYourPartnerSelfEmployed_Yes() throws Exception{
+		click(isYourPartnerSelfEmployed_Yes);
+	}
+	
+	public void clickIsYourPartnerSelfEmployed_No() throws Exception{
+		click(isYourPartnerSelfEmployed_No);
+	}
 	
 	public void clickDoYouHaveAPartner_Yes() throws Exception{
 		click(doYouHaveAPartner_Yes);
@@ -158,6 +181,7 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 	
 	public void clickcontinue() throws Exception{
 		click(continueButton);
+		Thread.sleep(10000);
 	}
 	
 	public CLA_WebDebtAboutYouPage(WebDriver driver) {

@@ -1,0 +1,139 @@
+Feature: out of scope by area of law
+          
+
+Scenario Outline: Debt scope test 
+             - own home - 
+             - home at risk 
+             - single < 60 
+             - unemployed 
+             - yes property
+             - no kids
+             - no investments
+             - no valuables
+             - outstanding mortgage
+             - high maintenance
+
+         
+         - Outcome - unlikely    
+
+          Given I am on the public problem page
+          When I select debt
+          Then I am redirected to the debt what do you need help with page
+          When I click that I own my own home
+          Then I am redirected to the debt what do you need help with page
+          And I click YES I am at risk of losing my home
+          Then I am redirected to the about you page
+          When I say NO I do not have a partner
+          And I say NO I do not receive benefits
+          And I say NO I have no children aged 15 or under
+          And I say NO I have no children aged 16 or over
+          And I say YES I have property
+          And I say NO I am not employed
+          And I say NO I am not self-employed
+          And I say NO I or my partner is under 60
+          And I say NO I have no savings or investments
+          And I say NO I don't have valuables worth over 500  
+          And I click continue
+          Then I verify I am on your property page
+          And I say YES the property is the main residence 
+          And I say NO no one else owns a share of the property
+          And I say the property is worth "<property value>"
+          And I say there is "<mortgage>" left to pay on the mortgage
+          And I say the last monthly mortgage payment was "<mortgage payment>"
+          And I say NO I do not rent out parts of the property
+          And I say NO my share of the property is not in dispute
+          And I click continue
+          Then I verify I am on the income page
+          When I say I received "<maintenance>" maintenance
+          #per_week, per_4week, per_month, per_year - is period selectable options
+          And I say the  period is "per week" for received maintenance period
+          And I say I received "<pension>" pension
+          And I say the period is "per week" for received pension
+          And I say I received "<other>" other income
+          And I say  period is "per week" for received other income
+          And I click continue
+          Then I verify I am on the review page
+          When I click confirm answers    
+          Then I verify I am unlikely to qualify for legal aid
+          Examples:
+          |property value|mortgage|mortgage payment|maintenance|pension|other|
+          |100800.01     |0       |0               |0          |0      |0    |
+          |100800.01     |0       |0               |0          |0      |0    |               
+          
+
+Scenario Outline: Debt scope test 
+             - own home  
+             - home at risk 
+             - partner < 60 
+             - unemployed 
+             - partner employed
+             - yes property
+             - no kids
+             - no investments
+             - no valuables
+             - partner has high paying job
+
+
+         
+         - Outcome - unlikely    
+
+          Given I am on the public problem page
+          When I select debt
+          Then I am redirected to the debt what do you need help with page
+          When I click that I own my own home
+          Then I am redirected to the debt what do you need help with page
+          And I click YES I am at risk of losing my home
+          Then I am redirected to the about you page
+          And I say YES I have a partner
+          And I say NO I am not in dispute with my partner
+          And I say NO I do not receive benefits
+          And I say NO I have no children aged 15 or under
+          And I say NO I have no children aged 16 or over
+          And I say YES I have property
+          And I say NO I am not employed
+          And I say YES my partner is employed
+          And I say NO I am not self-employed
+          And I say NO my partner is not self-employed
+          And I say NO I or my partner is under 60
+          And I say NO I have no savings or investments
+          And I say NO I don't have valuables worth over 500  
+          And I click continue
+          Then I verify I am on you and your partners property page
+          And I say YES the property is the main residence 
+          And I say NO no one else owns a share of the property
+          And I say the property is worth "<property value>"
+          And I say there is "<mortgage>" left to pay on the mortgage
+          And I say the last monthly mortgage payment was "<mortgage payment>"
+          And I say NO I do not rent out parts of the property
+          And I say NO my share of the property is not in dispute
+          And I click continue
+          Then I verify I am on you and your partners income page
+          When I say I received "<maintenance>" maintenance
+          #per_week, per_4week, per_month, per_year - is period selectable options
+          And I say the  period is "per week" for received maintenance period
+          And I say I received "<pension>" pension
+          And I say the period is "per week" for received pension
+          And I say I received "<other>" other income
+          And I say  period is "per week" for received other income
+          And I say my partner receives "<partner wage>" gross wage 
+          And I say the period is "per week" for gross wage
+          And I say my partners pays "<partner tax>" income tax  
+          And I say the period is "per week" for income tax paid
+          And I say my partners pays "<partner ni>" national insuracnce contributions 
+          And I say the period is "per week" for national insurance contributions
+          And I say my partner receives "<partner work credit>" working tax credit
+          And I say the period is "per week" for working tax credit
+          And I say my partner receives "<partner maintenance>" for maintenance
+          And I say the period is "per week" for maintenance
+          And I say my partner receives "<partner pension>" from pensions
+          And I say the period is "per week" for the pensions
+          And I say my partner receives "<partner other>" other income
+          And I say the period is "per week" for other income
+          And I click continue
+          Then I verify I am on the review page
+          When I click confirm answers    
+          Then I verify I am unlikely to qualify for legal aid
+          Examples:
+       |property value|mortgage|mortgage payment|maintenance|pension|other|partner wage|partner tax|partner ni|partner work credit|partner maintenance|partner pension|partner other|
+       |100008.01     |0       |0               |100         |0     |0    |0           |0          |0         |0                  |0                  |0               |0           |
+       |100008.01     |0       |0               |0           |0     |0    |0           |0          |0         |0                  |1000               |0               |0           |
