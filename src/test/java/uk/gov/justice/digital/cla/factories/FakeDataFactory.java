@@ -7,11 +7,17 @@ package uk.gov.justice.digital.cla.factories;
 public class FakeDataFactory {
 	
 	public static String getCLAWebStartPageUrl(){
+		if ( ConfigurationFactory.getEnvironment().equalsIgnoreCase(ConfigurationFactory.trainingEnvironment) )
+			return "http://public-training.cla.dsd.io/";
+		else if ( ConfigurationFactory.getEnvironment().equalsIgnoreCase(ConfigurationFactory.demoEnvironment) )
+			return "http://public-demo.cla.dsd.io/";
+		else
+			return 	"https://cla-public.service.dsd.io/";
+		
 //		return "http://172.22.5.112:5000";
 //		return "http://public-demo.cla.dsd.io/";
 //		return "http://public-training.cla.dsd.io/";
-//		return "https://cla-public.service.dsd.io/";
-		return 	"https://cla-public.service.dsd.io/";
+//		return "https://cla-public.service.dsd.io/";		
 //        return	"https://www.gov.uk/check-if-civil-legal-advice-can-help-you";
 	}
 	

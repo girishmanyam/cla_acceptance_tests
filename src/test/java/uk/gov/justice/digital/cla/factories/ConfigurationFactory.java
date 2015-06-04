@@ -27,13 +27,15 @@ public class ConfigurationFactory {
 	public final static String operaBrowser   = "OPERA";
 	
 	public final static String developmentEnvironment = "DEVELOPMENT";
-	public final static String localEnvironment = "LOCAL";
+	public final static String stagingEnvironment = "STAGING";
+	public final static String demoEnvironment = "DEMO";
+	public final static String trainingEnvironment = "TRAINING";
 	
 	public static String getEnvironment(){
 		if (!(System.getProperty("environment") == null) )
 			   return System.getProperty("environment").toUpperCase();
 		//return default if no system property set		
-		return ConfigurationFactory.localEnvironment;
+		return ConfigurationFactory.stagingEnvironment;
 	}
 	
 	public static String getWebDriverName(){
