@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CLA_WebEmploymentFindLegalAdvisorPage extends CLA_WebFindALegalAdvisorPage {
 	
-	private String expectedTextOnPage = "If you feel you’ve been discriminated against at work";
+	private String expectedTextOnPage = "You can still seek advice from a legal adviser - you will have to pay for this advice.";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/p[1]");
 	

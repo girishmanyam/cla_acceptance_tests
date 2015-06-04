@@ -7,7 +7,7 @@ import uk.gov.justice.digital.cla.page.SeleniumPage;
 
 public class CLA_WebLegalAidIsNotAvailablePage extends SeleniumPage {
 	
-	private String expectedTextOnPage = "Legal aid is not available for this type of problem";
+	private String expectedTextOnPage = "Legal aid is not usually available for this type of problem";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 

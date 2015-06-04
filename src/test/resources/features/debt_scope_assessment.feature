@@ -10,7 +10,7 @@ Scenario: Yes I own my own home - no risk - NO MEANS TEST
           When I click that I own my own home
           Then I am redirected to the debt what do you need help with page
           And I click NO I am not at risk of losing my home
-          Then I verify I am on legal aid is not available for this problem page
+          Then I verify I am on the legal aid is not available for this problem page
 
 Scenario: Yes I own my own home - at risk - MEANS TEST
 

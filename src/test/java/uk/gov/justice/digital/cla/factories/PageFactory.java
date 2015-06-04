@@ -11,7 +11,9 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebDVWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtAboutYouPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebEducationWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentFindLegalAdvisorPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
@@ -156,6 +158,13 @@ public class PageFactory {
 	public static CLA_WebDVWhatDoYouNeedHelpWithPage getCLAWebDVWhatDoYouNeedHelpWithPage(WebDriver driver){
 		return new CLA_WebDVWhatDoYouNeedHelpWithPage(driver);
 	}
+	
+	public static CLA_WebEducationWhatDoYouNeedHelpWithPage getCLAWebEducationWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebEducationWhatDoYouNeedHelpWithPage(driver);
+	}
 
+	public static CLA_WebEmploymentWhatDoYouNeedHelpWithPage getCLAWebEmploymentWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebEmploymentWhatDoYouNeedHelpWithPage(driver);
+	}
 
 }
