@@ -1,6 +1,7 @@
+@staging
 Feature: Employment scope assessment
 
-@sprint
+
 Scenario Outline: employment - discrimination - age - over 18 
 
           Given I am on the public problem page
@@ -20,7 +21,7 @@ Scenario Outline: employment - discrimination - age - over 18
           |at university                                  |about me page                                           |
           |other                                          |You can still seek advice from a legal adviser          |
           
-            
+          
 Scenario: employment - age - under 18 - at work -  MEANS TEST
 
           Given I am on the public problem page
@@ -31,7 +32,7 @@ Scenario: employment - age - under 18 - at work -  MEANS TEST
           And I click I under 18
           Then I verify I am on the contact civil legal advice page  
           
-            
+             
 Scenario Outline:  employment - discrimination - disability
 
           Given I am on the public problem page
@@ -51,7 +52,7 @@ Scenario Outline:  employment - discrimination - disability
           |at university                                  |about me page                                   |
           |other                                          |legal aid is not available for this problem page|  
           
-             
+            
 Scenario Outline:  employment - discrimination - gender
 
           Given I am on the public problem page
@@ -72,7 +73,7 @@ Scenario Outline:  employment - discrimination - gender
           |other                                          |legal aid is not available for this problem page|
           
           
-            
+              
 Scenario Outline: employment - discrimination - marriage
 
           Given I am on the public problem page
@@ -87,7 +88,7 @@ Scenario Outline: employment - discrimination - marriage
           |at work                                        |about me page                                   |
           |other                                          |legal aid is not available for this problem page|  
 
-             
+           
 Scenario Outline:  employment - discrimination - race
 
           Given I am on the public problem page
@@ -107,7 +108,7 @@ Scenario Outline:  employment - discrimination - race
           |at university                                  |about me page                                   |
           |other                                          |legal aid is not available for this problem page|   
           
-            
+              
 Scenario Outline: employment - discrimination - race
 
           Given I am on the public problem page
@@ -127,11 +128,11 @@ Scenario Outline: employment - discrimination - race
           |at university                                  |about me page                                   |
           |other                                          |legal aid is not available for this problem page|  
           
-           
+          
 Scenario: employment - none of the above - NO MEANS TEST
 
           Given I am on the public problem page
           When I select Employment
           Then I am redirected to the debt what do you need help with page
           When I click employment none of the above
-          Then I verify I am on the legal aid is not available for this problem page                         
+          Then I verify I am on the legal aid is not usually available for this problem page                         

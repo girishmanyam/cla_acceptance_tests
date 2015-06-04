@@ -18,6 +18,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebLegalAidIsNotAvailablePage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebLegalAidIsNotUsuallyAvailablePage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebMentalHealthFinaALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebOutGoingsPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebPersonalInjuryFindLegalAdvisor;
@@ -165,6 +166,10 @@ public class PageFactory {
 
 	public static CLA_WebEmploymentWhatDoYouNeedHelpWithPage getCLAWebEmploymentWhatDoYouNeedHelpWithPage(WebDriver driver){
 		return new CLA_WebEmploymentWhatDoYouNeedHelpWithPage(driver);
+	}
+	
+	public static CLA_WebLegalAidIsNotUsuallyAvailablePage getCLAWebLegalAidIsNotUsuallyAvailablePage(WebDriver driver){
+		return new CLA_WebLegalAidIsNotUsuallyAvailablePage(driver);
 	}
 
 }

@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
-public class CLA_WebLegalAidIsNotAvailablePage extends SeleniumPage {
+public class CLA_WebLegalAidIsNotUsuallyAvailablePage extends SeleniumPage {
 	
-	private String expectedTextOnPage = "Legal aid is not available for this type of problem";
+	private String expectedTextOnPage = "Legal aid is not usually available for this type of problem";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 
-	public CLA_WebLegalAidIsNotAvailablePage(WebDriver driver) {
+	public CLA_WebLegalAidIsNotUsuallyAvailablePage(WebDriver driver) {
 		super(driver);
 	}
 	
@@ -20,5 +20,4 @@ public class CLA_WebLegalAidIsNotAvailablePage extends SeleniumPage {
 		return isTextContainedInInnerText(expectedTextOnPageSelector,
 				expectedTextOnPage);
 	}
-
 }

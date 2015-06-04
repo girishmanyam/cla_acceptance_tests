@@ -13,7 +13,6 @@ import uk.gov.justice.digital.cla.webdriver.SharedDriver;
 import static org.junit.Assert.assertTrue;
 
 public class EmploymentScopeAssessmentSteps {
-	
 
 	private StepContext stepContext = StepContextSingleton.getInstance();
 	private WebDriver driver;
@@ -23,20 +22,35 @@ public class EmploymentScopeAssessmentSteps {
 		this.driver = driver;
 		journeyFactory = new JourneyFactory(driver);
 	}
-	
+
 	@When("^I select Employment$")
 	public void i_select_Employment() throws Throwable {
-	    PageFactory.getCLAWebProblemPage(driver).clickEmployment();
+		PageFactory.getCLAWebProblemPage(driver).clickEmployment();
 	}
 
 	@When("^I click employment discrimination$")
 	public void i_click_employment_discrimination() throws Throwable {
-	    PageFactory.getCLAWebEmploymentWhatDoYouNeedHelpWithPage(driver).clickEmploymentDiscrimination();
+		PageFactory.getCLAWebEmploymentWhatDoYouNeedHelpWithPage(driver)
+				.clickEmploymentDiscrimination();
 	}
-	
+
 	@Then("^I verify I am on the You can still seek advice from a legal adviser$")
-	public void i_verify_I_am_on_the_You_can_still_seek_advice_from_a_legal_adviser() throws Throwable {
-		assertTrue(PageFactory.getCLAWebEmploymentFindLegalAdvisorPage(driver).verifyOnPage());
+	public void i_verify_I_am_on_the_You_can_still_seek_advice_from_a_legal_adviser()
+			throws Throwable {
+		assertTrue(PageFactory.getCLAWebEmploymentFindLegalAdvisorPage(driver)
+				.verifyOnPage());
+	}
+
+	@When("^I click employment none of the above$")
+	public void i_click_employment_none_of_the_above() throws Throwable {
+		PageFactory.getCLAWebEmploymentWhatDoYouNeedHelpWithPage(driver)
+				.clickEmploymentAnyOtherProblem();
+	}
+
+	@Then("^I verify I am on the legal aid is not usually available for this problem page$")
+	public void i_verify_I_am_on_the_legal_aid_is_not_usually_available_for_this_problem_page()
+			throws Throwable {
+		assertTrue(PageFactory.getCLAWebLegalAidIsNotUsuallyAvailablePage(driver).verifyOnPage());
 	}
 
 }
