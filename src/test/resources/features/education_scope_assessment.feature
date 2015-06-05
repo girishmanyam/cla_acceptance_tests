@@ -153,4 +153,4 @@ Scenario: education - none of the above - NO MEANS TEST
           When I select Education
           Then I am redirected to the debt what do you need help with page
           When I click education none of the above
-          Then I verify I am on the legal aid is not available for this problem page                         
+          Then I verify I am on the legal aid is not usually available for this problem page                         
