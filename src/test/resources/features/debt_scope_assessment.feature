@@ -1,5 +1,5 @@
 @staging
-Feature: Debt Scope Assessment for qualification to the means test?
+Feature: Debt Scope Assessment
 
 
 Scenario: Yes I own my own home - no risk - NO MEANS TEST

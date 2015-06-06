@@ -14,6 +14,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidP
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEducationWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentWhatDoYouNeedHelpWithPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebFamilyWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebImmigrationAndAsylumFindALegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebIncomePage;
@@ -30,6 +31,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebTellUsHowYouFeelPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebTroubleWithThePoliceFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYouAndYouPartnersPropertyPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYouAndYourPartnersIncomePage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebYouMayBeAbleToGetLegalAidForFamilyMediationPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYouMightBeEligibleContactPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebYourPropertyPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage;
@@ -170,6 +172,14 @@ public class PageFactory {
 	
 	public static CLA_WebLegalAidIsNotUsuallyAvailablePage getCLAWebLegalAidIsNotUsuallyAvailablePage(WebDriver driver){
 		return new CLA_WebLegalAidIsNotUsuallyAvailablePage(driver);
+	}
+	
+	public static CLA_WebFamilyWhatDoYouNeedHelpWithPage getCLAWebFamilyWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebFamilyWhatDoYouNeedHelpWithPage(driver);
+	}
+	
+	public static CLA_WebYouMayBeAbleToGetLegalAidForFamilyMediationPage getCLAWebYouMayBeAbleToGetLegalAidForFamilyMediationPage(WebDriver driver){
+		return new CLA_WebYouMayBeAbleToGetLegalAidForFamilyMediationPage(driver);
 	}
 
 }
