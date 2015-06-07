@@ -77,7 +77,7 @@ Scenario Outline: family - problem ex-partner - disputes over children
           |problem expartner disputes over children and you are under 18   |contact civil legal advice page                 |
           |problem expartner disputes over children and any other problem  |legal aid is not available for this problem page|  
 
-@sprint
+
 Scenario Outline: family - problem ex-partner - disputes over children
 
           Given I am on the public problem page

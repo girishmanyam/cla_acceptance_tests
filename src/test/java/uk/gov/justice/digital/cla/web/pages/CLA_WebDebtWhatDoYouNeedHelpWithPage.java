@@ -91,36 +91,40 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
 	private By discriminationDisabilityAtWork = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By discriminationDisabilityUsingAService = new By.ByXPath(
+	private By discriminationDisabilityAtHome = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	private By discriminationDisabilityAtAPrivateClub = new By.ByXPath(
+	private By discriminationDisabilityUsingAService = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	private By discriminationDisabilityWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
+	private By discriminationDisabilityAtAPrivateClub = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By discriminationDisabilityAtSchoolOrCollege = new By.ByXPath(
+	private By discriminationDisabilityWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By discriminationDisabilityAtUniversity = new By.ByXPath(
+	private By discriminationDisabilityAtSchoolOrCollege = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
-	private By discriminationDisabilityOther = new By.ByXPath(
+	private By discriminationDisabilityAtUniversity = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+	private By discriminationDisabilityOther = new By.ByXPath(
+			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
 
 	private By discriminationByGender = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
 
 	private By discriminationGenderAtWork = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By discriminationGenderUsingAService = new By.ByXPath(
+	private By discriminationGenderAtHome = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	private By discriminationGenderAtAPrivateClub = new By.ByXPath(
+	private By discriminationGenderUsingAService = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	private By discriminationGenderWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
+	private By discriminationGenderAtAPrivateClub = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By discriminationGenderAtSchoolOrCollege = new By.ByXPath(
+	private By discriminationGenderWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By discriminationGenderAtUniversity = new By.ByXPath(
+	private By discriminationGenderAtSchoolOrCollege = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
-	private By discriminationGenderOther = new By.ByXPath(
+	private By discriminationGenderAtUniversity = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+	private By discriminationGenderOther = new By.ByXPath(
+			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
 
 	private By discriminationByMarriageOrCivilPartnership = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
@@ -153,36 +157,40 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 
 	private By discriminationRaceAtWork = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By discriminationRaceUsingAService = new By.ByXPath(
+	private By discriminationRaceAtHome = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	private By discriminationRaceAtAPrivateClub = new By.ByXPath(
+	private By discriminationRaceUsingAService = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	private By discriminationRaceWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
+	private By discriminationRaceAtAPrivateClub = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By discriminationRaceAtSchoolOrCollege = new By.ByXPath(
+	private By discriminationRaceWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By discriminationRaceAtUniversity = new By.ByXPath(
+	private By discriminationRaceAtSchoolOrCollege = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
-	private By discriminationRaceOther = new By.ByXPath(
+	private By discriminationRaceAtUniversity = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+	private By discriminationRaceOther = new By.ByXPath(
+			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
 
 	private By discriminationByReligion = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
 
 	private By discriminationReligionAtWork = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By discriminationReligionUsingAService = new By.ByXPath(
+	private By discriminationReligionAtHome= new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	private By discriminationReligionAtAPrivateClub = new By.ByXPath(
+	private By discriminationReligionUsingAService = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	private By discriminationReligionWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
+	private By discriminationReligionAtAPrivateClub = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By discriminationReligionAtSchoolOrCollege = new By.ByXPath(
+	private By discriminationReligionWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By discriminationReligionAtUniversity = new By.ByXPath(
+	private By discriminationReligionAtSchoolOrCollege = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
-	private By discriminationReligionOther = new By.ByXPath(
+	private By discriminationReligionAtUniversity = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+	private By discriminationReligionOther = new By.ByXPath(
+			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
 
 	private By discriminationNoneOfTheAbove = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
@@ -193,6 +201,11 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 	private By aSBOOrASBIAAPrivateLord = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
 	
 	private By rentedAccommodationNoneOfTheAbove = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+	
+	
+	public void clickDiscriminationDisabilityAtHome() throws Exception{
+		click(discriminationDisabilityAtHome);
+	}
 
 	public void clickRentedAccommodationNoneOfTheAbove() throws Exception{
 		click(rentedAccommodationNoneOfTheAbove);
@@ -247,6 +260,10 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 		click(discriminationReligionAtWork);
 	}
 	
+	public void clickDiscriminationReligionAHome() throws Exception {
+		click(discriminationReligionAtHome);
+	}
+	
 	public void clickDiscriminationByRace() throws Exception {
 		click(discriminationByRace);
 	}
@@ -274,6 +291,10 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 
 	public void clickDiscriminationRaceUsingAService() throws Exception {
 		click(discriminationRaceUsingAService);
+	}
+	
+	public void clickDiscriminationRaceAtHome() throws Exception {
+		click(discriminationRaceAtHome);
 	}
 
 	public void clickDiscriminationRaceAtWork() throws Exception {
@@ -321,6 +342,10 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
 
 	public void clickDiscriminationGenderUsingAService() throws Exception {
 		click(discriminationGenderUsingAService);
+	}
+
+	public void clickDiscriminationGenderAtHome() throws Exception {
+		click(discriminationGenderAtHome);
 	}
 
 	public void clickDiscriminationGenderAtWork() throws Exception {

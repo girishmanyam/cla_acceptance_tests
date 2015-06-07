@@ -188,7 +188,7 @@ Scenario: In rented accommodation - discrimination - age - under 18 - at work - 
           And I click I under 18
           Then I verify I am on the contact civil legal advice page  
           
-         
+        
 Scenario Outline: In rented accommodation - discrimination - disability
 
           Given I am on the public problem page
@@ -202,6 +202,7 @@ Scenario Outline: In rented accommodation - discrimination - disability
           Examples:
           |situation                                      |page                                            |
           |at work                                        |about me page                                   |
+          |at home                                        |about me page                                   |          
           |while using a service                          |about me page                                   |
           |at a private club                              |about me page                                   | 
           |when someone was carrying out a public function|about me page                                   |
@@ -223,6 +224,7 @@ Scenario Outline: In rented accommodation - discrimination - gender
           Examples:
           |situation                                      |page                                            |
           |at work                                        |about me page                                   |
+          |at home                                        |about me page                                   |             
           |while using a service                          |about me page                                   |
           |at a private club                              |about me page                                   | 
           |when someone was carrying out a public function|about me page                                   |
@@ -247,7 +249,7 @@ Scenario Outline: In rented accommodation - discrimination - marriage
           |at work                                        |about me page                                   |
           |other                                          |legal aid is not available for this problem page|  
 
-          
+       
 Scenario Outline: In rented accommodation - discrimination - race
 
           Given I am on the public problem page
@@ -261,6 +263,7 @@ Scenario Outline: In rented accommodation - discrimination - race
           Examples:
           |situation                                      |page                                            |
           |at work                                        |about me page                                   |
+          |at home                                        |about me page                                   |                                 
           |while using a service                          |about me page                                   |
           |at a private club                              |about me page                                   | 
           |when someone was carrying out a public function|about me page                                   |
@@ -269,7 +272,7 @@ Scenario Outline: In rented accommodation - discrimination - race
           |other                                          |legal aid is not available for this problem page|   
           
           
-Scenario Outline: In rented accommodation - discrimination - race
+Scenario Outline: In rented accommodation - discrimination - religion
 
           Given I am on the public problem page
           When I select debt
@@ -282,6 +285,7 @@ Scenario Outline: In rented accommodation - discrimination - race
           Examples:
           |situation                                      |page                                            |
           |at work                                        |about me page                                   |
+          |at home                                        |about me page                                   |              
           |while using a service                          |about me page                                   |
           |at a private club                              |about me page                                   | 
           |when someone was carrying out a public function|about me page                                   |

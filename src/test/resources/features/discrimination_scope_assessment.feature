@@ -60,7 +60,7 @@ Scenario Outline:  discrimination - gender
           Then I verify I am on the <page> 
           Examples:
           |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
+          |at work                                        |about me page                                   |       
           |while using a service                          |about me page                                   |
           |at a private club                              |about me page                                   | 
           |when someone was carrying out a public function|about me page                                   |
