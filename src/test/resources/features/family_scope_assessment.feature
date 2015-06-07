@@ -93,6 +93,7 @@ Scenario Outline: family - problem ex-partner - disputes over children
           |yes    |contact civil legal advice page                 |
           |no     |about me page                                   |  
 
+@sprint
 Scenario Outline: family - problem ex-partner
 
           Given I am on the public problem page
@@ -102,7 +103,6 @@ Scenario Outline: family - problem ex-partner
           And I click ex-partner disputes over children
           And I click <situation>
           Examples:          
-          ||
           |financial settlement             |
           |domestic violence or harassment  |
           |family mediation                 |
