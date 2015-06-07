@@ -11,6 +11,7 @@ import uk.gov.justice.digital.cla.web.pages.CLA_WebDVWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtAboutYouPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebDebtYoureLikelyToGetLegalAidPage;
+import uk.gov.justice.digital.cla.web.pages.CLA_WebDiscriminationWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEducationWhatDoYouNeedHelpWithPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentFindLegalAdvisorPage;
 import uk.gov.justice.digital.cla.web.pages.CLA_WebEmploymentWhatDoYouNeedHelpWithPage;
@@ -180,6 +181,10 @@ public class PageFactory {
 	
 	public static CLA_WebYouMayBeAbleToGetLegalAidForFamilyMediationPage getCLAWebYouMayBeAbleToGetLegalAidForFamilyMediationPage(WebDriver driver){
 		return new CLA_WebYouMayBeAbleToGetLegalAidForFamilyMediationPage(driver);
+	}
+	
+	public static CLA_WebDiscriminationWhatDoYouNeedHelpWithPage getCLAWebDiscriminationWhatDoYouNeedHelpWithPage(WebDriver driver){
+		return new CLA_WebDiscriminationWhatDoYouNeedHelpWithPage(driver);
 	}
 
 }
