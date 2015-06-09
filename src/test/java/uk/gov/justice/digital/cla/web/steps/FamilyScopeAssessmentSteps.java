@@ -92,7 +92,7 @@ public class FamilyScopeAssessmentSteps {
 	@When("^I click financial settlement$")
 	public void i_click_financial_settlement() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickFinancialSettlement();
+				.clickexPartnerFinancialSettlement();
 	}
 
 	@When("^I click domestic violence or harassment$")
@@ -122,7 +122,7 @@ public class FamilyScopeAssessmentSteps {
 	@When("^I click \\(family\\) problem expartner and any other problem$")
 	public void i_click_family_problem_expartner_and_any_other_problem() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-		.clickexPartnerAndAnyOtherProblem();
+		.clickExPartnerAndAnyOtherProblem();
 	}
 	
 	
@@ -228,5 +228,68 @@ public class FamilyScopeAssessmentSteps {
 	public void i_click_family_I_am_outside_Uk_no_ex_partner_child_abducted_in_the_UK() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerIAmOutsideUkAbductedchildInUK_No();
 	}
+	
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction you have been accused of child abduction$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction_you_have_been_accused_of_child_abduction() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction();
+	}
+	
+	@When("^I click \\(family\\) ex-partner financial settlement$")
+	public void i_click_family_ex_partner_financial_settlement() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickexPartnerFinancialSettlement();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement Under (\\d+)$")
+	public void i_click_family_ex_partner_financial_settlement_Under(int arg1) throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementYouAreUnder18();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement Domestic abuse$")
+	public void i_click_family_ex_partner_financial_settlement_Domestic_abuse() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementDomesticAbuse();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement Domestic abuse Immediate Risk of harm yes$")
+	public void i_click_family_ex_partner_financial_settlement_Domestic_abuse_Immediate_Risk_of_harm_yes() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement Domestic abuse Immediate Risk of harm no$")
+	public void i_click_family_ex_partner_financial_settlement_Domestic_abuse_Immediate_Risk_of_harm_no() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No();
+	}
+	
+	@When("^I click \\(family\\) ex-partner financial settlement International family maintenance$")
+	public void i_click_family_ex_partner_financial_settlement_International_family_maintenance() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementInternationalFamilyMaintenance();
+	}
+
+
+	@When("^I click \\(family\\) ex-partner financial settlement any other problem$")
+	public void i_click_family_ex_partner_financial_settlement_any_other_problem() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementAnyOtherProblem();
+	}
+	
+	@When("^I click \\(family\\) ex-partner financial settlement family mediation$")
+	public void i_click_family_ex_partner_financial_settlement_family_mediation() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementFamilyMediation();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement family mediation mediation started yes$")
+	public void i_click_family_ex_partner_financial_settlement_family_mediation_mediation_started_yes() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementFamilyMediationStartMediation_Yes();
+	}
+
+	@When("^I click \\(family\\) ex-partner financial settlement family mediation mediation started no$")
+	public void i_click_family_ex_partner_financial_settlement_family_mediation_mediation_started_no() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerFinancialSettlementFamilyMediationStartMediation_No();
+	}
+	
+	@When("^I click \\(family\\) problem with your ex-partner any other problem$")
+	public void i_click_family_problem_with_your_ex_partner_any_other_problem() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExpartnerAnyOtherProblem();
+	}
+
+
 
 }

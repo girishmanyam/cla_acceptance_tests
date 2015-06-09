@@ -52,18 +52,68 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
 	          private By exPartnerIAmOutsideUkAbductedchildInUK_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
 	          private By exPartnerIAmOutsideUkAbductedchildInUK_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-           private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	       private By exPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
 	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By financialSettlement = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	private By exPartnerFinancialSettlement = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	   private By exPartnerFinancialSettlementYouAreUnder18 = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	   private By exPartnerFinancialSettlementDomesticAbuse = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	   private By exPartnerFinancialSettlementInternationalFamilyMaintenance = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	   private By exPartnerFinancialSettlementFamilyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");	       
+	   private By exPartnerFinancialSettlementAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
 	private By domesticViolenceOrHarrassment = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
 	private By familyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By expartnerAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+	private By exPartnerAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
 	
 	
 	private By disputesOverChildren = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
 	private By childAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
 	private By familyAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
 
+	public void clickExPartnerFinancialSettlementAnyOtherProblem() throws Exception{
+		click(exPartnerFinancialSettlementAnyOtherProblem);
+	}
+
+	public void clickExPartnerFinancialSettlementFamilyMediationStartMediation_No() throws Exception{
+		click(exPartnerFinancialSettlementFamilyMediationStartMediation_No);
+	}
+	
+	public void clickExPartnerFinancialSettlementFamilyMediationStartMediation_Yes() throws Exception{
+		click(exPartnerFinancialSettlementFamilyMediationStartMediation_Yes);
+	}
+	
+	public void clickExPartnerFinancialSettlementFamilyMediation() throws Exception{
+		click(exPartnerFinancialSettlementFamilyMediation);
+	}
+
+	public void clickExPartnerFinancialSettlementInternationalFamilyMaintenance() throws Exception{
+		click(exPartnerFinancialSettlementInternationalFamilyMaintenance);
+	}
+	
+	public void clickExPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No() throws Exception{
+		click(exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No);
+	}
+	
+	public void clickExPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes() throws Exception{
+		click(exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes);
+	}
+	
+	public void clickExPartnerFinancialSettlementDomesticAbuse() throws Exception {
+		click(exPartnerFinancialSettlementDomesticAbuse);
+		
+	}
+	
+	public void clickExPartnerFinancialSettlementYouAreUnder18() throws Exception{
+		click(exPartnerFinancialSettlementYouAreUnder18);
+	}
+	
+	public void clickExPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction() throws Exception{
+		click(exPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction);
+	}
 
 	public void clickExPartnerIAmOutsideUkAbductedchildInUK_No() throws Exception{
 		click(exPartnerIAmOutsideUkAbductedchildInUK_No);
@@ -132,7 +182,7 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 		click(atRiskOfHarm_Yes);
 	}
 	
-	public void clickexPartnerAndAnyOtherProblem() throws Exception{
+	public void clickExPartnerAndAnyOtherProblem() throws Exception{
 		click(exPartnerDivorceAndAnyOtherProblem);
 	}
 	
@@ -151,7 +201,7 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	}
 	
 	public void clickExpartnerAnyOtherProblem() throws Exception{
-		click(expartnerAnyOtherProblem);
+		click(exPartnerAnyOtherProblem);
 	}
 	
 	public void clickFamilyMediation() throws Exception{
@@ -162,8 +212,8 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
     	click(domesticViolenceOrHarrassment);
     }
 	
-	public void clickFinancialSettlement() throws Exception{
-		click(financialSettlement);
+	public void clickexPartnerFinancialSettlement() throws Exception{
+		click(exPartnerFinancialSettlement);
 	}
 	
 	public void clickExpartnerDisputesOverChildren() throws Exception{
@@ -207,6 +257,8 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 		return isTextContainedInInnerText(expectedTextOnPageSelector,
 				expectedTextOnPage);
 	}
+
+
 
 
 

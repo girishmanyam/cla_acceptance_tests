@@ -95,7 +95,7 @@ Scenario Outline: family - problem ex-partner - disputes over children - risk of
           |yes    |contact civil legal advice page                 |
           |no     |about me page                                   |  
 
-@sprint         
+        
 Scenario Outline: family - problem ex-partner - disputes over children - 
 
           Given I am on the public problem page
@@ -112,7 +112,7 @@ Scenario Outline: family - problem ex-partner - disputes over children -
           |yes    |contact civil legal advice page                 |
           |no     |about me page                                   |  
 
-@sprint 
+ 
 Scenario Outline: family - problem ex-partner - disputes over children - 
 
           Given I am on the public problem page
@@ -130,25 +130,58 @@ Scenario Outline: family - problem ex-partner - disputes over children -
           |none of the above                                          |legal aid is not available for this problem page|
 
 
-Scenario: family - problem disputes over children
+Scenario Outline: family - problem ex-partner - financial settlement - under 18
 
           Given I am on the public problem page
           When I select family
           Then I am redirected to the family what do you need help with page
-          When I click disputes over children                 
-                  
+          When I click (family) problem with your ex-partner
+          And I click (family) ex-partner financial settlement
+          And I click (family) ex-partner financial settlement <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                       |page                                                    |
+          |Under 18                        |contact civil legal advice page                         |
+          |International family maintenance|about me page                                           |
+          |any other problem               |legal aid is not usually available for this problem page|
 
-Scenario: family - child abduction
+
+Scenario Outline: family - problem ex-partner - financial settlement - under 18
 
           Given I am on the public problem page
           When I select family
           Then I am redirected to the family what do you need help with page
-          When I click child abduction   
+          When I click (family) problem with your ex-partner
+          And I click (family) ex-partner financial settlement 
+          And I click (family) ex-partner financial settlement Domestic abuse
+          And I click (family) ex-partner financial settlement Domestic abuse Immediate Risk of harm <boolean>
+          Then I verify I am on the <page> 
+          Examples:
+          |boolean|page                                            |
+          |yes    |contact civil legal advice page                 |
+          |no     |about me page                                   |  
+
           
-
-Scenario: family - any other problem
+Scenario Outline: family - problem ex-partner - financial settlement - family mediation
 
           Given I am on the public problem page
           When I select family
           Then I am redirected to the family what do you need help with page
-          When I click family any other problem                        
+          When I click (family) problem with your ex-partner
+          And I click (family) ex-partner financial settlement 
+          And I click (family) ex-partner financial settlement family mediation
+          And I click (family) ex-partner financial settlement family mediation mediation started <boolean>
+          Then I verify I am on the <page> 
+          Examples:
+          |boolean|page                                                     |
+          |yes    |about me page                                            |
+          |no     |you maybe able to get legal aid for family mediation page| 
+          
+          
+Scenario: family - problem ex-partner - any other problem
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page
+          When I click (family) problem with your ex-partner any other problem 
+          Then I verify I am on the legal aid is not usually available for this problem page                                            
