@@ -48,8 +48,12 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	       private By exPartnerDisputeOverChildrenAtRiskOfHarm_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
 
 	    private By exPartnerDisputeOverChildrenAndAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-
-	
+	    private By exPartnerDisputeOverChildrenChildAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	          private By exPartnerIAmOutsideUkAbductedchildInUK_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	          private By exPartnerIAmOutsideUkAbductedchildInUK_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+           private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
 	private By financialSettlement = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
 	private By domesticViolenceOrHarrassment = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
 	private By familyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
@@ -59,6 +63,38 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	private By disputesOverChildren = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
 	private By childAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
 	private By familyAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+
+
+	public void clickExPartnerIAmOutsideUkAbductedchildInUK_No() throws Exception{
+		click(exPartnerIAmOutsideUkAbductedchildInUK_No);
+	}
+	
+	public void clickExPartnerIAmOutsideUkAbductedchildInUK_Yes() throws Exception{
+		click(exPartnerIAmOutsideUkAbductedchildInUK_Yes);
+	}
+	
+	public void ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove() throws Exception {
+		click(exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove);	
+	}
+
+	
+	public void ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild() 
+	throws Exception{
+		click(exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild);		
+	}
+
+	public void ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted() throws Exception{
+		click(exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted);
+		
+	}	
+	
+	public void clickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted() throws Exception{
+		click(exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted);
+	}
+	
+	public void clickExPartnerDisputeOverChildrenChildAbduction() throws Exception{
+		click(exPartnerDisputeOverChildrenChildAbduction);
+	}
 	
 	public void clickExPartnerDisputeOverChildrenAtRiskOfHarm_Yes() throws Exception{
 		click(exPartnerDisputeOverChildrenAtRiskOfHarm_Yes);
@@ -170,6 +206,9 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 		waitForPageLoaded();
 		return isTextContainedInInnerText(expectedTextOnPageSelector,
 				expectedTextOnPage);
-	}	
+	}
+
+
+
 
 }

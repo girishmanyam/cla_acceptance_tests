@@ -23,38 +23,58 @@ public class FamilyScopeAssessmentSteps {
 		this.driver = driver;
 		journeyFactory = new JourneyFactory(driver);
 	}
-
-	@When("^I click local council involved$")
-	public void i_click_local_council_involved() throws Throwable {
-		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickYourLocalCouncilInvolved();
+	
+	@Then("^I am redirected to the family what do you need help with page$")
+	public void i_am_redirected_to_the_family_what_do_you_need_help_with_page() throws Throwable {
+	    assertTrue(PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).verifyOnPage());
 	}
 
-	@When("^I click yes council trying to take children into care$")
-	public void i_click_yes_council_trying_to_take_children_into_care()
-			throws Throwable {
+	@When("^I click \\(family\\) local council involved$")
+	public void i_click_family_local_council_involved() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickTakeYourChildIntoCare_Yes();
+		.clickYourLocalCouncilInvolved();
 	}
 
-	@When("^I click no council trying to take children into care$")
-	public void i_click_no_council_trying_to_take_children_into_care()
-			throws Throwable {
+	@When("^I click yes \\(family\\) council trying to take children into care$")
+	public void i_click_yes_family_council_trying_to_take_children_into_care() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickTakeYourChildIntoCare_No();
+		.clickTakeYourChildIntoCare_Yes();
 	}
 
-	@When("^I click problem with your ex-partner$")
-	public void i_click_problem_with_your_ex_partner() throws Throwable {
+	@When("^I click no \\(family\\) council trying to take children into care$")
+	public void i_click_no_family_council_trying_to_take_children_into_care() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickAProblemWithYourExPartner();
+		.clickTakeYourChildIntoCare_No();
 	}
+
+	
+	@When("^I click \\(family\\) problem with your ex-partner$")
+	public void i_click_family_problem_with_your_ex_partner() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
+		.clickAProblemWithYourExPartner();
+	}
+
+	@When("^I click \\(family\\) divorce separation or dissolution$")
+	public void i_click_family_divorce_separation_or_dissolution() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
+		.clickDivorceSeparationOrDissolution();
+	}
+
 
 	@When("^I click disputes over children$")
 	public void i_click_disputes_over_children() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
 				.clickDisputesOverChildren();
 	}
+	
+	
+	@When("^I click \\(family\\) ex-partner disputes over children$")
+	public void i_click_family_ex_partner_disputes_over_children() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
+		.clickExpartnerDisputesOverChildren();
+	}
+
+
 
 	@When("^I click child abduction$")
 	public void i_click_child_abduction() throws Throwable {
@@ -68,17 +88,6 @@ public class FamilyScopeAssessmentSteps {
 				.clickFamilyAnyOtherProblem();
 	}
 
-	@When("^I click divorce separation or dissolution$")
-	public void i_click_divorce_separation_or_dissolution() throws Throwable {
-		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickDivorceSeparationOrDissolution();
-	}
-
-	@When("^I click ex-partner disputes over children$")
-	public void i_click_ex_partner_disputes_over_children() throws Throwable {
-		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickExpartnerDisputesOverChildren();
-	}
 
 	@When("^I click financial settlement$")
 	public void i_click_financial_settlement() throws Throwable {
@@ -104,54 +113,53 @@ public class FamilyScopeAssessmentSteps {
 				.clickExpartnerAnyOtherProblem();
 	}
 
-	@When("^I click problem expartner and you are under (\\d+)$")
-	public void i_click_problem_expartner_and_you_are_under(int arg1)
-			throws Throwable {
+	@When("^I click \\(family\\) problem expartner and you are under (\\d+)$")
+	public void i_click_family_problem_expartner_and_you_are_under(int arg1) throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickExPartnerAndUnder18();
+		.clickExPartnerAndUnder18();
 	}
 
-	@When("^I click problem expartner and any other problem$")
-	public void i_click_problem_expartner_and_any_other_problem()
-			throws Throwable {
+	@When("^I click \\(family\\) problem expartner and any other problem$")
+	public void i_click_family_problem_expartner_and_any_other_problem() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickexPartnerAndAnyOtherProblem();
+		.clickexPartnerAndAnyOtherProblem();
+	}
+	
+	
+	@When("^I click \\(family\\) domestic abuse$")
+	public void i_click_family_domestic_abuse() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
+		.clickDomesticAbuse();
 	}
 
-	@When("^I click domestic abuse$")
-	public void i_click_domestic_abuse() throws Throwable {
+	@When("^I click yes \\(family\\) risk of harm$")
+	public void i_click_yes_family_risk_of_harm() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickDomesticAbuse();
+		.clickAtRiskOfHarm_Yes();
 	}
 
-	@When("^I click yes risk of harm$")
-	public void i_click_yes_risk_of_harm() throws Throwable {
+	@When("^I click no \\(family\\) risk of harm$")
+	public void i_click_no_family_risk_of_harm() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickAtRiskOfHarm_Yes();
+		.clickAtRiskOfHarm_No();
 	}
 
-	@When("^I click no risk of harm$")
-	public void i_click_no_risk_of_harm() throws Throwable {
+	@When("^I click \\(family\\) ex-partner family mediation$")
+	public void i_click_family_ex_partner_family_mediation() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickAtRiskOfHarm_No();
+		.clickExPartnerFamilyMediation();
 	}
 
-	@When("^I click ex-partner family mediation$")
-	public void i_click_ex_partner_family_mediation() throws Throwable {
+	@When("^I click \\(family\\) yes family mediation started$")
+	public void i_click_family_yes_family_mediation_started() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickExPartnerFamilyMediation();
+		.clickFamilyMediationStart_Yes();
 	}
 
-	@When("^I click yes family mediation started$")
-	public void i_click_yes_family_mediation_started() throws Throwable {
+	@When("^I click \\(family\\) no family mediation started$")
+	public void i_click_family_no_family_mediation_started() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickFamilyMediationStart_Yes();
-	}
-
-	@When("^I click no family mediation started$")
-	public void i_click_no_family_mediation_started() throws Throwable {
-		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickFamilyMediationStart_No();
+		.clickFamilyMediationStart_No();
 	}
 
 	@Then("^I verify I am on the you maybe able to get legal aid for family mediation page$")
@@ -161,31 +169,64 @@ public class FamilyScopeAssessmentSteps {
 				.getCLAWebYouMayBeAbleToGetLegalAidForFamilyMediationPage(
 						driver).verifyOnPage());
 	}
-
-	@When("^I click problem expartner disputes over children and you are under (\\d+)$")
-	public void i_click_problem_expartner_disputes_over_children_and_you_are_under(
-			int arg1) throws Throwable {
+	
+	@When("^I click \\(family\\) problem expartner disputes over children and you are under (\\d+)$")
+	public void i_click_family_problem_expartner_disputes_over_children_and_you_are_under(int arg1) throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickExPartnerDisputeOverChildrenAndUnder18();
+		.clickExPartnerDisputeOverChildrenAndUnder18();
 	}
 
-	@When("^I click problem expartner disputes over children and any other problem$")
-	public void i_click_problem_expartner_disputes_over_children_and_any_other_problem()
-			throws Throwable {
+	@When("^I click \\(family\\) problem expartner disputes over children and any other problem$")
+	public void i_click_family_problem_expartner_disputes_over_children_and_any_other_problem() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver)
-				.clickExPartnerDisputeOverChildrenAndAnyOtherProblem();
+		.clickExPartnerDisputeOverChildrenAndAnyOtherProblem();
 	}
+	
 
-	@When("^I click yes ex-partner disputes over children risk of harm$")
-	public void i_click_yes_ex_partner_disputes_over_children_risk_of_harm()
-			throws Throwable {
+	@When("^I click \\(family\\) yes ex-partner disputes over children risk of harm$")
+	public void i_click_family_yes_ex_partner_disputes_over_children_risk_of_harm() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerDisputeOverChildrenAtRiskOfHarm_Yes();
+
 	}
 
-	@When("^I click no ex-partner disputes over children risk of harm$")
-	public void i_click_no_ex_partner_disputes_over_children_risk_of_harm()
-			throws Throwable {
+	@When("^I click \\(family\\) no ex-partner disputes over children risk of harm$")
+	public void i_click_family_no_ex_partner_disputes_over_children_risk_of_harm() throws Throwable {
 		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerDisputeOverChildrenAtRiskOfHarm_No();
+	}
+	
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerDisputeOverChildrenChildAbduction();
+	}
+
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction you have been accused of abducting a child$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction_you_have_been_accused_of_abducting_a_child() throws Throwable {
+	    PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted();
+	}
+
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction you are seeking an order to prevent the removal of a child$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction_you_are_seeking_an_order_to_prevent_the_removal_of_a_child() throws Throwable {
+	    PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild();
+	}
+
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction none of the above$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction_none_of_the_above() throws Throwable {
+	    PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).ClickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove();
+	}
+	
+	@When("^I click \\(family\\) ex-partner disputes over children child abduction your child has been abducted$")
+	public void i_click_family_ex_partner_disputes_over_children_child_abduction_your_child_has_been_abducted() throws Throwable {
+	   PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted();
+	}
+
+	@When("^I click \\(family\\) I am outside Uk yes ex-partner child abducted in the UK$")
+	public void i_click_family_I_am_outside_Uk_yes_ex_partner_child_abducted_in_the_UK() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerIAmOutsideUkAbductedchildInUK_Yes();
+	}
+
+	@When("^I click \\(family\\) I am outside Uk no ex-partner child abducted in the UK$")
+	public void i_click_family_I_am_outside_Uk_no_ex_partner_child_abducted_in_the_UK() throws Throwable {
+		PageFactory.getCLAWebFamilyWhatDoYouNeedHelpWithPage(driver).clickExPartnerIAmOutsideUkAbductedchildInUK_No();
 	}
 
 }
