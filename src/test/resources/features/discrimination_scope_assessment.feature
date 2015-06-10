@@ -1,4 +1,4 @@
-@sprint
+@staging
 Feature: Discrimination scope assessment
 
 
