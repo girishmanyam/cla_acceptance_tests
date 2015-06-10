@@ -7,7 +7,9 @@ import org.openqa.selenium.By.ByXPath;
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
 
-public class CLA_WebEmploymentWhatDoYouNeedHelpWithPage extends SeleniumPage{
+public class CLA_WebEmploymentWhatDoYouNeedHelpWithPage extends CLA_WebWhatDoYouNeedHelpWithPage {
+	
+	
 	
 	public CLA_WebEmploymentWhatDoYouNeedHelpWithPage(WebDriver driver) {
 		super(driver);
@@ -17,8 +19,8 @@ public class CLA_WebEmploymentWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 	
-	private By employmentDiscrimination = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By employmentAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	private By employmentDiscrimination = new By.ByXPath(xpath_Option_1);
+	private By employmentAnyOtherProblem = new By.ByXPath(xpath_Option_2);
 	
 	public void clickEmploymentDiscrimination() throws Exception{
 		click(employmentDiscrimination);

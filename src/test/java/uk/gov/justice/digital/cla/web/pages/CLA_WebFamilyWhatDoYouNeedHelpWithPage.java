@@ -6,7 +6,7 @@ import org.openqa.selenium.By.ByXPath;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
-public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
+public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends CLA_WebWhatDoYouNeedHelpWithPage {
 
 	public CLA_WebFamilyWhatDoYouNeedHelpWithPage(WebDriver driver) {
 		super(driver);
@@ -16,63 +16,63 @@ public class CLA_WebFamilyWhatDoYouNeedHelpWithPage extends SeleniumPage{
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/h1");
 
-	private By yourLocalCouncilInvolved = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	private By yourLocalCouncilInvolved = new By.ByXPath(xpath_Option_1);
 	
-	  private By takeYourChildIntoCare_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	  private By takeYourChildIntoCare_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	  private By takeYourChildIntoCare_Yes = new By.ByXPath(xpath_Option_1);
+	  private By takeYourChildIntoCare_No = new By.ByXPath(xpath_Option_2);
 
-	private By aProblemWithYourExPartner = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	private By aProblemWithYourExPartner = new By.ByXPath(xpath_Option_2);
 	
-	  private By divorceSeparationOrDissolution = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	  private By divorceSeparationOrDissolution = new By.ByXPath(xpath_Option_1);
 	
-	    private By exPartnerAndUnder18 = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	    private By exPartnerAndUnder18 = new By.ByXPath(xpath_Option_1);
 	
-	    private By domesticAbuse = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	    private By domesticAbuse = new By.ByXPath(xpath_Option_2);
 	
-	       private By atRiskOfHarm_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	       private By atRiskOfHarm_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	       private By atRiskOfHarm_Yes = new By.ByXPath(xpath_Option_1);
+	       private By atRiskOfHarm_No = new By.ByXPath(xpath_Option_2);
 	
-   	    private By exPartnerFamilyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+   	    private By exPartnerFamilyMediation = new By.ByXPath(xpath_Option_3);
 	 
-   	       private By familyMediationStart_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	       private By familyMediationStart_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+   	       private By familyMediationStart_Yes = new By.ByXPath(xpath_Option_1);
+	       private By familyMediationStart_No = new By.ByXPath(xpath_Option_2);
 	
-	    private By exPartnerDivorceAndAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+	    private By exPartnerDivorceAndAnyOtherProblem = new By.ByXPath(xpath_Option_4);
 	
-	  private By expartnerDisputesOverChildren = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	  private By expartnerDisputesOverChildren = new By.ByXPath(xpath_Option_2);
 
-	    private By exPartnerDisputeOverChildrenAndUnder18 = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	    private By exPartnerDisputeOverChildrenDomesticAbuse = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	    private By exPartnerDisputeOverChildrenAndUnder18 = new By.ByXPath(xpath_Option_1);
+	    private By exPartnerDisputeOverChildrenDomesticAbuse = new By.ByXPath(xpath_Option_2);
 		
-	       private By exPartnerDisputeOverChildrenAtRiskOfHarm_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	       private By exPartnerDisputeOverChildrenAtRiskOfHarm_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	       private By exPartnerDisputeOverChildrenAtRiskOfHarm_Yes = new By.ByXPath(xpath_Option_1);
+	       private By exPartnerDisputeOverChildrenAtRiskOfHarm_No = new By.ByXPath(xpath_Option_2);
 
-	    private By exPartnerDisputeOverChildrenAndAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	    private By exPartnerDisputeOverChildrenChildAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	          private By exPartnerIAmOutsideUkAbductedchildInUK_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	          private By exPartnerIAmOutsideUkAbductedchildInUK_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	       private By exPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By exPartnerFinancialSettlement = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	   private By exPartnerFinancialSettlementYouAreUnder18 = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	   private By exPartnerFinancialSettlementDomesticAbuse = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
-	   private By exPartnerFinancialSettlementInternationalFamilyMaintenance = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	   private By exPartnerFinancialSettlementFamilyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_Yes = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_No = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");	       
-	   private By exPartnerFinancialSettlementAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By domesticViolenceOrHarrassment = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By familyMediation = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
-	private By exPartnerAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+	    private By exPartnerDisputeOverChildrenAndAnyOtherProblem = new By.ByXPath(xpath_Option_5);
+	    private By exPartnerDisputeOverChildrenChildAbduction = new By.ByXPath(xpath_Option_3);
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbducted = new By.ByXPath(xpath_Option_1);
+	          private By exPartnerIAmOutsideUkAbductedchildInUK_Yes = new By.ByXPath(xpath_Option_1);
+	          private By exPartnerIAmOutsideUkAbductedchildInUK_No = new By.ByXPath(xpath_Option_2);
+	       private By exPartnerDisputeOverChildrenChildAbductionYouHaveBeenAccusedOfChildAbduction = new By.ByXPath(xpath_Option_2);
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedYoureSeekingOrderRemovalOfChild = new By.ByXPath(xpath_Option_3);
+	       private By exPartnerDisputeOverChildrenChildAbductionYourChildHasBeenAbductedNoneOfTheAbove = new By.ByXPath(xpath_Option_4);
+	private By exPartnerFinancialSettlement = new By.ByXPath(xpath_Option_3);
+	   private By exPartnerFinancialSettlementYouAreUnder18 = new By.ByXPath(xpath_Option_1);
+	   private By exPartnerFinancialSettlementDomesticAbuse = new By.ByXPath(xpath_Option_2);
+	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_Yes = new By.ByXPath(xpath_Option_1);
+	      private By exPartnerFinancialSettlementDomesticAbuseRiskOfHarm_No = new By.ByXPath(xpath_Option_2);
+	   private By exPartnerFinancialSettlementInternationalFamilyMaintenance = new By.ByXPath(xpath_Option_3);
+	   private By exPartnerFinancialSettlementFamilyMediation = new By.ByXPath(xpath_Option_4);
+	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_Yes = new By.ByXPath(xpath_Option_1);
+	      private By exPartnerFinancialSettlementFamilyMediationStartMediation_No = new By.ByXPath(xpath_Option_2);	       
+	   private By exPartnerFinancialSettlementAnyOtherProblem = new By.ByXPath(xpath_Option_5);
+	private By domesticViolenceOrHarrassment = new By.ByXPath(xpath_Option_4);
+	private By familyMediation = new By.ByXPath(xpath_Option_5);
+	private By exPartnerAnyOtherProblem = new By.ByXPath(xpath_Option_5);
 	
 	
-	private By disputesOverChildren = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
-	private By childAbduction = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
-	private By familyAnyOtherProblem = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+	private By disputesOverChildren = new By.ByXPath(xpath_Option_3);
+	private By childAbduction = new By.ByXPath(xpath_Option_4);
+	private By familyAnyOtherProblem = new By.ByXPath(xpath_Option_5);
 
 	public void clickExPartnerFinancialSettlementAnyOtherProblem() throws Exception{
 		click(exPartnerFinancialSettlementAnyOtherProblem);

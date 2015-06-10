@@ -184,4 +184,6 @@ Scenario: family - problem ex-partner - any other problem
           When I select family
           Then I am redirected to the family what do you need help with page
           When I click (family) problem with your ex-partner any other problem 
-          Then I verify I am on the legal aid is not usually available for this problem page                                            
+          Then I verify I am on the legal aid is not usually available for this problem page 
+          
+                                               

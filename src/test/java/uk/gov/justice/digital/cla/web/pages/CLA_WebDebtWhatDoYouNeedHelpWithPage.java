@@ -6,201 +6,198 @@ import org.openqa.selenium.WebDriver;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
-public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends SeleniumPage {
+public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends CLA_WebWhatDoYouNeedHelpWithPage {
 
-	private String expectedTextOnPage = "What do you need help with?";
-	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
 
 	private By changeLink = new By.ByXPath(
 			".//*[@id='content']/div[2]/article/div[1]/a/ul/li[2]/span[2]");
 
 	private By iOwnMyProperty = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By iLiveInRentedAccommodation = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By iAmHomeless = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By iOweMoney = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 
 	private By atRiskOfLosingYourHome_Yes = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By atRiskOfLosingYourHome_No = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By becomingHomeless = new By.ByXPath(
 			"	.//*[@id='content']/div[2]/article/div/ul/li[1]/a");
 	private By loosingAccommodationUKVIRefusing = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By eviction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By unlawfulEviction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By evictionWithNotice = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By yourHomeisInDisrepair = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By youOrYourFamilyisInRiskOfInjuryOrIllness_Yes = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By youOrYourFamilyisInRiskOfInjuryOrIllness_No = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By harassment = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 
 	private By harassmentByNeighbourOrLandlord = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 
 	private By harassmentPartnerOrFamilyMember = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By harasementPartnerOrFamilyMemberInJeopardy_Yes = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By harasementPartnerOrFamilyMemberInJeopardy_No = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By harassmentSomeOneElse = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 
 	private By discrimination = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationByAge = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 
 	private By discrimination18OrOver = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationUnder18 = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By discriminationAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 
 	private By discriminationByDisability = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationDisabilityAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationDisabilityAtHome = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationDisabilityUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationDisabilityAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationDisabilityWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationDisabilityAtSchoolOrCollege = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationDisabilityAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 	private By discriminationDisabilityOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+			xpath_Option_8);
 
 	private By discriminationByGender = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 
 	private By discriminationGenderAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationGenderAtHome = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationGenderUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationGenderAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationGenderWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationGenderAtSchoolOrCollege = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationGenderAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 	private By discriminationGenderOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+			xpath_Option_8);
 
 	private By discriminationByMarriageOrCivilPartnership = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 
 	private By discriminationByMarriageOrCivilPartnershipAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationByMarriageOrCivilPartnershipOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 
 	private By discriminationByPregnancyOrMaternity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 
 	private By discriminationPregnancyAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationPregnancyUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationPregnancyAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationPregnancyWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationPregnancyAtSchoolOrCollege = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationPregnancyAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationPregnancyOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 
 	private By discriminationByRace = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 
 	private By discriminationRaceAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationRaceAtHome = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationRaceUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationRaceAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationRaceWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationRaceAtSchoolOrCollege = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationRaceAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 	private By discriminationRaceOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+			xpath_Option_8);
 
 	private By discriminationByReligion = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 
 	private By discriminationReligionAtWork = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+			xpath_Option_1);
 	private By discriminationReligionAtHome= new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+			xpath_Option_2);
 	private By discriminationReligionUsingAService = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[3]/a");
+			xpath_Option_3);
 	private By discriminationReligionAtAPrivateClub = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[4]/a");
+			xpath_Option_4);
 	private By discriminationReligionWhenSomeOneWasPeformingAPublicFunction = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[5]/a");
+			xpath_Option_5);
 	private By discriminationReligionAtSchoolOrCollege = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[6]/a");
+			xpath_Option_6);
 	private By discriminationReligionAtUniversity = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+			xpath_Option_7);
 	private By discriminationReligionOther = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+			xpath_Option_8);
 
 	private By discriminationNoneOfTheAbove = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+			xpath_Option_8);
 	
-	private By aSBOOrASBI = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[7]/a");
+	private By aSBOOrASBI = new By.ByXPath(xpath_Option_7);
 	
-	private By aSBOOrASBIASocialHousingLandlord = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[1]/a");
-	private By aSBOOrASBIAAPrivateLord = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[2]/a");
+	private By aSBOOrASBIASocialHousingLandlord = new By.ByXPath(xpath_Option_1);
+	private By aSBOOrASBIAAPrivateLord = new By.ByXPath(xpath_Option_2);
 	
-	private By rentedAccommodationNoneOfTheAbove = new By.ByXPath(".//*[@id='content']/div[2]/article/div/ul/li[8]/a");
+	private By rentedAccommodationNoneOfTheAbove = new By.ByXPath(xpath_Option_8);
 	
 	
 	public void clickDiscriminationDisabilityAtHome() throws Exception{

@@ -1,4 +1,4 @@
-@staging
+@sprint
 Feature: Discrimination scope assessment
 
 
@@ -12,13 +12,13 @@ Scenario Outline: discrimination - age - over 18
           And I click <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |while using a service                          |about me page                                   |
-          |at a private club                              |about me page                                   | 
-          |when someone was carrying out a public function|about me page                                   |
-          |at university                                  |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |while using a service                          |about me page                                           |
+          |at a private club                              |about me page                                           | 
+          |when someone was carrying out a public function|about me page                                           |
+          |at university                                  |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|
           
           
 Scenario: discrimination - age - under 18 - at work -  MEANS TEST
@@ -40,15 +40,15 @@ Scenario Outline:  discrimination - disability
           And I click disability discrimination <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |at home                                        |about me page                                   |
-          |while using a service                          |about me page                                   |
-          |at a private club                              |about me page                                   | 
-          |when someone was carrying out a public function|about me page                                   |
-          |at school or college                           |about me page                                   |
-          |at university                                  |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|  
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |at home                                        |about me page                                           |
+          |while using a service                          |about me page                                           |
+          |at a private club                              |about me page                                           | 
+          |when someone was carrying out a public function|about me page                                           |
+          |at school or college                           |about me page                                           |
+          |at university                                  |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|  
           
          
 Scenario Outline:  discrimination - gender
@@ -60,15 +60,15 @@ Scenario Outline:  discrimination - gender
           And I click gender discrimination <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |at home                                        |about me page                                   |                 
-          |while using a service                          |about me page                                   |
-          |at a private club                              |about me page                                   | 
-          |when someone was carrying out a public function|about me page                                   |
-          |at school or college                           |about me page                                   |
-          |at university                                  |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |at home                                        |about me page                                           |                 
+          |while using a service                          |about me page                                           |
+          |at a private club                              |about me page                                           | 
+          |when someone was carrying out a public function|about me page                                           |
+          |at school or college                           |about me page                                           |
+          |at university                                  |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|
           
           
          
@@ -81,9 +81,9 @@ Scenario Outline:  discrimination - marriage
           And I click marriage discrimination <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|  
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|  
 
            
 Scenario Outline:  discrimination - race
@@ -95,15 +95,15 @@ Scenario Outline:  discrimination - race
           And I click race discrimination <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |at home                                        |about me page                                   |          
-          |while using a service                          |about me page                                   |
-          |at a private club                              |about me page                                   | 
-          |when someone was carrying out a public function|about me page                                   |
-          |at school or college                           |about me page                                   |
-          |at university                                  |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|   
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |at home                                        |about me page                                           |          
+          |while using a service                          |about me page                                           |
+          |at a private club                              |about me page                                           | 
+          |when someone was carrying out a public function|about me page                                           |
+          |at school or college                           |about me page                                           |
+          |at university                                  |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|   
           
          
 Scenario Outline: discrimination - religion
@@ -115,12 +115,12 @@ Scenario Outline: discrimination - religion
           And I click religion discrimination <situation>
           Then I verify I am on the <page> 
           Examples:
-          |situation                                      |page                                            |
-          |at work                                        |about me page                                   |
-          |at home                                        |about me page                                   |         
-          |while using a service                          |about me page                                   |
-          |at a private club                              |about me page                                   | 
-          |when someone was carrying out a public function|about me page                                   |
-          |at school or college                           |about me page                                   |
-          |at university                                  |about me page                                   |
-          |other                                          |legal aid is not available for this problem page|
+          |situation                                      |page                                                    |
+          |at work                                        |about me page                                           |
+          |at home                                        |about me page                                           |         
+          |while using a service                          |about me page                                           |
+          |at a private club                              |about me page                                           | 
+          |when someone was carrying out a public function|about me page                                           |
+          |at school or college                           |about me page                                           |
+          |at university                                  |about me page                                           |
+          |other                                          |legal aid is not usually available for this problem page|
