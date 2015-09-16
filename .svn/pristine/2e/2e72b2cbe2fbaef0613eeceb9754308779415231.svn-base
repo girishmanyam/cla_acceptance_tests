@@ -1,0 +1,44 @@
+package uk.gov.justice.digital.cla.web.steps;
+
+import org.openqa.selenium.WebDriver;
+
+import uk.gov.justice.digital.cla.factories.JourneyFactory;
+import uk.gov.justice.digital.cla.factories.PageFactory;
+import uk.gov.justice.digital.cla.step.StepContext;
+import uk.gov.justice.digital.cla.step.StepContextSingleton;
+import uk.gov.justice.digital.cla.webdriver.SharedDriver;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.When;
+
+public class ImmigrationAndAsylumScopeAssessment {
+	
+	private StepContext stepContext = StepContextSingleton.getInstance();
+	private WebDriver driver;
+	private JourneyFactory journeyFactory;
+
+	public ImmigrationAndAsylumScopeAssessment(SharedDriver driver) {
+		this.driver = driver;
+		journeyFactory = new JourneyFactory(driver);
+	}
+
+	@When("^I click want advice on seeking asylum$")
+	public void i_click_want_advice_on_seeking_asylum() throws Throwable {
+          PageFactory.getCLA_WebImmigrationAndAsylumWhatDoYouNeedHelpWithPage(driver).clickWantAdviceOnSeekingAsylum();
+	}
+	
+	@When("^I click you are losing your accomodation as UKVI is refusing support$")
+	public void i_click_you_are_losing_your_accomodation_as_UKVI_is_refusing_support() throws Throwable {
+		PageFactory.getCLA_WebImmigrationAndAsylumWhatDoYouNeedHelpWithPage(driver).clickYouAreLosingYourAccomodationAsUKVIIsRefusingSupport();;
+	}
+
+	@When("^I click you are a victim of human trafficking or domestic violence$")
+	public void i_click_you_are_a_victim_of_human_trafficking_or_domestic_violence() throws Throwable {
+		PageFactory.getCLA_WebImmigrationAndAsylumWhatDoYouNeedHelpWithPage(driver).clickYouAreAVictimOfHumanTraffickingOrDomesticViolence();
+	}
+
+	@When("^I click \\(immigration and asylum\\) any other problem$")
+	public void i_click_immigration_and_asylum_any_other_problem() throws Throwable {
+		PageFactory.getCLA_WebImmigrationAndAsylumWhatDoYouNeedHelpWithPage(driver).clickImmigrationAndAsylumAnyOtherProblem();
+	}
+
+}

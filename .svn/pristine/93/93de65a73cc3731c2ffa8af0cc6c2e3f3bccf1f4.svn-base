@@ -1,0 +1,45 @@
+Feature: Housing scope assessment
+
+
+Scenario: housing - own my home - no not at risk of loss - NO MEANS TEST
+
+          Given I am on the public problem page
+          When I select housing
+          Then I am redirected to the debt what do you need help with page
+          When I click that I own my own home
+          And I click NO I am not at risk of losing my home
+          Then I verify I am on the legal aid is not usually available for this problem page
+
+          
+Scenario: housing - own my home - no not at risk of loss - MEANS TEST
+
+          Given I am on the public problem page
+          When I select housing
+          Then I am redirected to the debt what do you need help with page
+          When I click that I own my own home
+          And I click YES I am at risk of losing my home
+          Then I verify I am on the about me page    
+
+
+
+
+         
+Scenario: housing - You're homeless - MEANS TEST
+
+          Given I am on the public problem page
+          When I select housing
+          Then I am redirected to the debt what do you need help with page
+          When I click that I am homeless
+          Then I verify I am on the about me page  
+
+
+
+
+         
+Scenario: housing - You owe money - NO MEANS TEST
+
+          Given I am on the public problem page
+          When I select housing
+          Then I am redirected to the debt what do you need help with page
+          When I click that I owe money
+          Then I verify I am on the legal aid is not usually available for this problem page                        

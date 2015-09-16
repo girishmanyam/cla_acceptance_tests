@@ -1,0 +1,38 @@
+@staging
+Feature: Immigration and asylum scope assessment
+
+
+
+Scenario: Immigration and asylum - you want advice on seeking asylum
+      
+          Given I am on the public problem page
+          When I select immigration and asylum
+          And I click want advice on seeking asylum
+          Then I verify I am on the about me page
+          
+          
+         
+Scenario: Immigration and asylum - you want advice on seeking asylum
+      
+          Given I am on the public problem page
+          When I select immigration and asylum
+          And I click you are losing your accomodation as UKVI is refusing support
+          Then I verify I am on the about me page            
+
+        
+Scenario: Immigration and asylum - you want advice on seeking asylum
+      
+          Given I am on the public problem page
+          When I select immigration and asylum
+          And I click you are a victim of human trafficking or domestic violence
+          Then I verify I am on the about me page          
+          
+         
+Scenario: Immigration and asylum - you want advice on seeking asylum
+      
+          Given I am on the public problem page
+          When I select immigration and asylum
+          And I click (immigration and asylum) any other problem
+          Then I verify I am on the legal aid is not usually available for this problem page            
+ 
+                 

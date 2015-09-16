@@ -1,0 +1,173 @@
+Feature: Family scope assessment
+
+
+Scenario: family - divorce or separation
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page
+          And I click (family) divorce separation or dissolution
+          And I click (family) I am under 18 
+          Then I verify I am on the contact civil legal advice page 
+  
+          
+
+Scenario Outline:  family - divorce or separation - domestic abuse
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page
+          And I click (family) divorce separation or dissolution
+          And I click (family) domestic abuse
+          And I click <boolean> (family) risk of harm
+          Then I verify I am on the <page> 
+          Examples:
+          |boolean|page                                            |
+          |yes    |contact civil legal advice page                 |
+          |no     |legal aid is available for this problem page    |   
+          
+@todo
+Scenario Outline: family - divorce or separation -  family mediation
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page
+          And I click (family) divorce separation or dissolution
+          And I click (family) divorce separation or dissolution family mediation
+          And I click (family) divorce separation or dissolution family mediation <boolean> family mediation started
+          Then I verify I am on the <page> 
+          Examples:
+          |boolean|page                                                     |
+          |yes    |legal aid is available for this problem page             |
+          |no     |you maybe able to get legal aid for family mediation page|                      
+         
+        
+Scenario: family - divorce or separation -  any other problem
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page
+          And I click (family) divorce separation or dissolution
+          And I click (family) any other problem 
+          Then I verify I am on the legal aid is not usually available for this problem page 
+          
+        
+Scenario Outline: family - disputes over children - with your expartner
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) disputes over children
+          And I click (family) dispute over children with your ex-partner
+          And I click (family) <situation>
+          Then I verify I am on the <page>
+          Examples:
+          |situation                                                   |page                                                       |
+          |dispute over children with your ex-partner I am under 18    |contact civil legal advice page                            |
+          |dispute over children with your ex-partner Child abduction  |contact civil legal advice page                            |       
+          |dispute over children with your ex-partner any other problem|legal aid is not usually available for this problem page   |
+
+        
+Scenario Outline: family - disputes over children - with your expartner
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) disputes over children
+          And I click (family) dispute over children with your ex-partner
+          And I click (family) dispute over children and domestic violence
+          And I click (family) <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation             |page                                                        |
+          |yes in risk of harm   |contact civil legal advice page                             |      
+          |no not in risk of harm|legal aid is available for this problem page                | 
+          
+         
+Scenario Outline: family - disputes over children - with your expartner
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) disputes over children
+          And I click (family) dispute over children with your ex-partner 
+          And I click (family) dispute over children and family mediation
+          And I click (family) <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation               |page                                                        |
+          |yes started mediation   |legal aid is available for this problem page                |      
+          |no not started mediation|you maybe able to get legal aid for family mediation page   |   
+
+Scenario Outline: family - disputes over children - relative seeking contact with a child
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) disputes over children
+          And I click I am relative seeking contact with a child
+          And I click (family) relative seeking contact with a child <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                                  |page                                                     |
+          |yes the child has been a victim of abuse   |legal aid is available for this problem page             |
+          |no the child has not been a victim of abuse|legal aid is not usually available for this problem page |
+
+
+Scenario Outline: family - disputes over children - relative seeking contact with a child
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) financial settlement  
+          And I click (family) financial settlement <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                       |page                                                        |
+          |I am under 18                   |contact civil legal advice page                             |      
+          |family international maintenance|legal aid is available for this problem page                |    
+          |any other problem               |legal aid is not usually available for this problem page    | 
+          
+          
+Scenario Outline: family - disputes over children - relative seeking contact with a child
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) financial settlement  
+          And I click (family) financial settlement dometsic abuse
+          And I click (family) financial settlement dometsic abuse <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                                  |page                                                     |
+          |yes I am at risk of harm                   |contact civil legal advice page                          |
+          |no I am not at risk of harm                |legal aid is available for this problem page             |  
+          
+         
+Scenario Outline: family - disputes over children - relative seeking contact with a child
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) financial settlement  
+          And I click (family) financial settlement family mediation
+          And I click (family) financial settlement family mediation <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                                  |page                                                     |
+          |yes I am in family mediation               |legal aid is available for this problem page             |
+          |no I am not in family mediation            |you maybe able to get legal aid for family mediation page|
+          
+          
+Scenario Outline: family - disputes over children - relative seeking contact with a child
+
+          Given I am on the public problem page
+          When I select family
+          Then I am redirected to the family what do you need help with page 
+          And I click (family) family mediation
+          And I click (family) family mediation <situation>
+          Then I verify I am on the <page> 
+          Examples:
+          |situation                                  |page                                                     |
+          |yes I am in family mediation               |legal aid is available for this problem page             |
+          |no I am not in family mediation            |you maybe able to get legal aid for family mediation page|                                                                                               

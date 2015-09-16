@@ -1,0 +1,33 @@
+@staging
+Feature: Debt Scope Assessment
+
+
+
+Scenario: Yes I own my own home - at risk - MEANS TEST
+
+          Given I am on the public problem page
+          When I select debt
+          Then I am redirected to the debt what do you need help with page
+          When I click that I own my own home which is at risk
+          Then I verify I am on the legal aid is available for this problem page
+          
+          
+
+Scenario: In rented accommodation - Becoming homeless - MEANS TEST
+
+          Given I am on the public problem page
+          When I select debt
+          Then I am redirected to the debt what do you need help with page
+          When I click that I am in rented accommodation and being evicted
+          Then I verify I am on the legal aid is available for this problem page
+
+                    
+Scenario: You owe money - NO MEANS TEST
+
+          Given I am on the public problem page
+          When I select debt
+          Then I am redirected to the debt what do you need help with page
+          When I click that I owe money
+          Then I verify I am on the legal aid is not usually available for this problem page  
+          
+                                                                                                                                             
