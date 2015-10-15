@@ -25,8 +25,7 @@ public class CLA_WebDebtWhatDoYouNeedHelpWithPage extends CLA_WebWhatDoYouNeedHe
 	private By atRiskOfLosingYourHome_No = new By.ByXPath(
 			xpath_Option_2);
 
-	private By becomingHomeless = new By.ByXPath(
-			"	.//*[@id='content']/div[2]/article/div/ul/li[1]/a");
+	private By becomingHomeless = new By.ByXPath(xpath_Option_1);
 	private By loosingAccommodationUKVIRefusing = new By.ByXPath(
 			xpath_Option_2);
 

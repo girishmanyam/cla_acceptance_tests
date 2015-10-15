@@ -14,12 +14,17 @@ public class CLA_WebYourSavingsPage extends SeleniumPage {
 
 	private String expectedTextOnPage = "Your savings";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 	private By getInTouch = new By.ByXPath(".//*[@id='callback-link']");
 	
 	private By savings = new By.ByXPath(".//*[@id='savings']");
 	private By investments = new By.ByXPath(".//*[@id='investments']");
+	private By valuables = new By.ByXPath(".//*[@id='valuables']");
+	
+	public void setValuables(String value) throws Exception{
+		setText(valuables, value);
+	}
 	
 	private By continueButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
 	

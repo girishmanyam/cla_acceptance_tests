@@ -8,7 +8,7 @@ public class CLA_WebDebtYoureLikelyToGetLegalAidPage extends SeleniumPage {
 	
 	private String expectedTextOnPage = "You might qualify for legal aid";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 
 	public CLA_WebDebtYoureLikelyToGetLegalAidPage(WebDriver driver) {

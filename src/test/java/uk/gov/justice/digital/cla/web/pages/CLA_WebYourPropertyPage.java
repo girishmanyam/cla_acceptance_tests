@@ -12,7 +12,7 @@ public class CLA_WebYourPropertyPage extends SeleniumPage {
 	
 	private String expectedTextOnPage = "Your property";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 	private By propertyIsMainHome_Yes = new By.ByXPath(".//*[@id='properties-0-is_main_home-0']");
 	private By propertyIsMainHome_No = new By.ByXPath(".//*[@id='properties-0-is_main_home-1']");

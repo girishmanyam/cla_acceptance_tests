@@ -22,40 +22,56 @@ public class OutgoingsPageSteps {
 		journeyFactory = new JourneyFactory(driver);
 	}
 	
-	@When("^I say I pay \"(.*?)\" rent$")
-	public void i_say_I_pay_rent(String rent) throws Throwable {
-	    PageFactory.getCLAWebOutGoingsPage(driver).setRent(rent);
+	@When("^I say I pay \"(.*?)\" rent \"(.*?)\"$")
+	public void i_say_I_pay_rent(String value, String period) throws Throwable {
+	    PageFactory.getCLAWebOutGoingsPage(driver).setRent(value);
+	    PageFactory.getCLAWebOutGoingsPage(driver).selectRentPeriodByValue(period);
 	}
 
-	@When("^I say the  period is \"(.*?)\" for rent payment$")
-	public void i_say_the_period_is_for_rent_payment(String period) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).selectRentPeriodByValue(period);
-	}
-
-	@When("^I say I pay \"(.*?)\" maintenance$")
-	public void i_say_I_pay_maintenance(String maintenance) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).setMaintenance(maintenance);
-	}
-
-	@When("^I say the period is \"(.*?)\" for maintenance payment$")
-	public void i_say_the_period_is_for_maintenance_payment(String period) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).selectMaintenancePeriodByValue(period);
+	@When("^I say I pay \"(.*?)\" maintenance \"(.*?)\"$")
+	public void i_say_I_pay_maintenance(String value, String period) throws Throwable {
+	    PageFactory.getCLAWebOutGoingsPage(driver).setMaintenance(value);
+	    PageFactory.getCLAWebOutGoingsPage(driver).selectMaintenancePeriodByValue(period);
 	}
 
 	@When("^I say I pay \"(.*?)\" other income contribution$")
-	public void i_say_I_pay_other_income_contribution(String incomeContribution) throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).setIncomeContribution(incomeContribution);
+	public void i_say_I_pay_other_income_contribution(String value) throws Throwable {
+	    PageFactory.getCLAWebOutGoingsPage(driver).setIncomeContribution(value);
 	}
-	
-	@When("^I click review my answers$")
-	public void i_click_review_my_answers() throws Throwable {
-		PageFactory.getCLAWebOutGoingsPage(driver).clickReviewYourAnswers();
-	}
+
 	
 	@Then("^I verify I am on the outgoings page$")
 	public void i_verify_I_am_on_the_outgoings_page() throws Throwable {
 		PageFactory.getCLAWebOutGoingsPage(driver).verifyOnPage();
 	}
 
+	
+	@When("^I click review my answers$")
+	public void i_click_review_my_answers() throws Throwable {
+		PageFactory.getCLAWebOutGoingsPage(driver).clickReviewYourAnswers();
+	}
+	
+	@Then("^I verify I am on you and your partners outgoings page$")
+	public void i_verify_I_am_on_you_and_your_partners_outgoings_page() throws Throwable {
+	    PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).verifyOnPage();
+	}
+	
+	@When("^our outgoing rent is \"(.*?)\" \"(.*?)\"$")
+	public void our_outgoing_rent_is(String value, String period) throws Throwable {
+		PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).setOutgoingRent(value);
+		PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).setOutgoingRentPeriod(period);
+	}
+
+	@When("^our outgoing maintenance is \"(.*?)\" \"(.*?)\"$")
+	public void our_outgoing_maintenance_is(String value, String period) throws Throwable {
+		PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).setOutgoingMaintenance(value);
+		PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).setOutgoingRentPeriod(period);
+
+	}
+
+	@When("^our outgoing payment for a monthly income contribution order is \"(.*?)\"$")
+	public void our_outgoing_payment_for_a_monthly_income_contribution_order_is(String value) throws Throwable {
+		PageFactory.get_CLA_WebYouAndYourPartnersOutgoingsPage(driver).setMonthyIncomeContributionOrder(value);
+	}
 
 }

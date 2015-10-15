@@ -30,7 +30,7 @@ public class CLA_WebProblemPage extends SeleniumPage {
 	private By welfareBenefits      = new By.ByXPath(".//*[@id='content']/div/article/div/ul/li[15]/a");
 	
 	private By getInTouchLink = new By.ByXPath(".//*[@id='callback-link']");
-	private By continueButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
+	private By continueButton = new By.ByXPath(".//*[@id='content']/div/article/form/p/button");
 	
 	private By immediateDangerGetInTouchLink = new By.ByXPath(".//*[@id='content']/div[2]/article/form/fieldset/div/ul/li[4]/label/div[2]/div/p/a");
 	private By parentOfChildTryingToTakeIntoCareGetInTouchLink = new By.ByXPath(".//*[@id='content']/div[2]/article/form/fieldset/div/ul/li[8]/label/div[2]/div/p/a");

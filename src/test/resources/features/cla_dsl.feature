@@ -114,5 +114,17 @@ Scenario: Get to about you
           
           
 
-
+   And I click continue
+    Then I verify I am on you and your partners income page
+    When I say I received "0.00" maintenance "per_week"
+    And I say I received "0.00" pension "per_week"
+    And I say I received "0.00" other income "per_week"
+    When I say my partner received "0.00" maintenance "per_week"
+    And I say my partner received "0.00" pension "per_week"
+    And I say my partner received "0.00" other income "per_week"
+    And I click continue
+    Then I verify I am on you and your partners outgoings page
+    When our outgoing rent is "0.00" "per_week"
+    And our outgoing maintenance is "0.00" "per_week"
+    And our outgoing payment for a monthly income contribution order is "0.00"
 

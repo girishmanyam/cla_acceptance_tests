@@ -9,9 +9,9 @@ public class CLA_WebReviewPage extends SeleniumPage {
 	
 	private String expectedTextOnPage = "Review your answers";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
-	private By confirmButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
+	private By confirmButton = new By.ByXPath(".//*[@id='content']/div/article/form/p/button");
 	
 	public void clickConfirm() throws Exception{
 		click(confirmButton);
@@ -26,6 +26,7 @@ public class CLA_WebReviewPage extends SeleniumPage {
 
 	public boolean verifyOnPage() throws Exception{
 		waitForPageLoaded();
+		Thread.sleep(500);
 		return isTextContainedInInnerText(expectedTextOnPageSelector,
 				expectedTextOnPage);
 	}

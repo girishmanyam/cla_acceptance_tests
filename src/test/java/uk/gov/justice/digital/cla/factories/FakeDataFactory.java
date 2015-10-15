@@ -12,6 +12,7 @@ public class FakeDataFactory {
 		else if ( ConfigurationFactory.getEnvironment().equalsIgnoreCase(ConfigurationFactory.demoEnvironment) )
 			return "http://public-demo.cla.dsd.io/";
 		else
+			//return "https://prod-public.cla.dsd.io/";
 			return "https://cla-public.service.dsd.io/";
 			//return 	"https://cla-public.service.dsd.io/";
 		

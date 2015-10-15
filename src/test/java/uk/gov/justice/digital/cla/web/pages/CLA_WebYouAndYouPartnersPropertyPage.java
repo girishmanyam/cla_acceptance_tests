@@ -14,7 +14,7 @@ public class CLA_WebYouAndYouPartnersPropertyPage extends CLA_WebYourPropertyPag
 
 	private String expectedTextOnPage = "You and your partner’s property";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 	public boolean verifyOnPage() throws Exception{
 		waitForPageLoaded();

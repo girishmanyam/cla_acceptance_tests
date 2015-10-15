@@ -9,7 +9,7 @@ public class CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage extends SeleniumP
 
 	private String expectedTextOnPage = "You’re unlikely to get legal aid";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 
 	public CLA_WebDebtYouAreUnlikelyToGetLegalAidContactPage(WebDriver driver) {

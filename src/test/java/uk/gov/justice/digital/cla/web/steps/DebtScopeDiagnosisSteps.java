@@ -45,10 +45,6 @@ public class DebtScopeDiagnosisSteps {
 				.verifyOnPage());
 	}
 
-	@Then("^I am redirected to the about you page$")
-	public void i_am_redirected_to_the_about_you_page() throws Throwable {
-		assertTrue(PageFactory.getCLAWebDebtAboutYouPage(driver).verifyOnPage());
-	}
 
 	@Then("^I am redirected to the debty scope diagnosis page$")
 	public void i_am_redirected_to_the_debty_scope_diagnosis_page()

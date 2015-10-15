@@ -7,11 +7,11 @@ import org.openqa.selenium.By.ByXPath;
 
 import uk.gov.justice.digital.cla.page.SeleniumPage;
 
-public class CLA_WebDebtAboutYouPage extends SeleniumPage {
+public class CLA_WebAboutYouPage extends SeleniumPage {
 	
 	private String expectedTextOnPage = "About you";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 	private By doYouHaveAPartner_Yes = new By.ByXPath(".//*[@id='have_partner-0']");
 	private By doYouHaveAPartner_No= new By.ByXPath(".//*[@id='have_partner-1']");
@@ -184,7 +184,7 @@ public class CLA_WebDebtAboutYouPage extends SeleniumPage {
 		Thread.sleep(10000);
 	}
 	
-	public CLA_WebDebtAboutYouPage(WebDriver driver) {
+	public CLA_WebAboutYouPage(WebDriver driver) {
 		super(driver);
 	}
 	

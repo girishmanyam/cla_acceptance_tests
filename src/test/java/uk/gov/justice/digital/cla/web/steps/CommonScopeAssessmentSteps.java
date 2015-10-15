@@ -11,7 +11,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class CommonScopeAssessmentSteps {
-	
+
 	private StepContext stepContext = StepContextSingleton.getInstance();
 	private WebDriver driver;
 	private JourneyFactory journeyFactory;
@@ -20,9 +20,10 @@ public class CommonScopeAssessmentSteps {
 		this.driver = driver;
 		journeyFactory = new JourneyFactory(driver);
 	}
-	
+
 	@When("^I click that I own my own home which is at risk$")
-	public void i_click_that_I_own_my_own_home_which_is_at_risk() throws Throwable {
+	public void i_click_that_I_own_my_own_home_which_is_at_risk()
+			throws Throwable {
 		PageFactory.getCLAWebDebtWhatDoYouNeedHelpWithPage(driver)
 				.clickOwnMyProperty();
 	}
@@ -39,11 +40,19 @@ public class CommonScopeAssessmentSteps {
 		PageFactory.getCLAWebDebtWhatDoYouNeedHelpWithPage(driver)
 				.clickAtRiskOfLosingYourHome_No();
 	}
-	
+
 	@Then("^I verify I am on the legal aid is available for this problem page$")
-	public void i_verify_I_am_on_the_legal_aid_is_available_for_this_problem_page() throws Throwable {
-	    PageFactory.getCLA_WebLegalAidIsAvailableForThisProblemPage(driver).verifyOnPage();
+	public void i_verify_I_am_on_the_legal_aid_is_available_for_this_problem_page()
+			throws Throwable {
+		PageFactory.getCLA_WebLegalAidIsAvailableForThisProblemPage(driver)
+				.verifyOnPage();
 	}
 
+	@Then("^I verify I am on the legal aid maybe able to help page$")
+	public void i_verify_I_am_on_the_legal_aid_maybe_able_to_help_page()
+			throws Throwable {
+		PageFactory.get_CLA_WebLegalAidMaybeAbleToHelpYouPage(driver)
+		.verifyOnPage();
+	}
 
 }

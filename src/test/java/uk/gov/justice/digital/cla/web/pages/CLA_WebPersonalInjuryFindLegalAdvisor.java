@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CLA_WebPersonalInjuryFindLegalAdvisor extends CLA_WebFindALegalAdvisorPage {
 	
-	private String expectedTextOnPage = "Legal aid is not usually available for advice about personal injury";
+	private String expectedTextOnPage = "A legal adviser may be able to help you";
 	private By expectedTextOnPageSelector = new By.ByXPath(
 			".//*[@id='content']/div/article/h1");
 	

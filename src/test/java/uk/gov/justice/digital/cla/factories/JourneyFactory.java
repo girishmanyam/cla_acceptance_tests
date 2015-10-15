@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 
 
+
 import uk.gov.justice.digital.cla.factories.FakeDataFactory;
 import uk.gov.justice.digital.cla.factories.PageFactory;
 
@@ -94,6 +95,14 @@ public class JourneyFactory {
 		PageFactory.getCLAWebProblemPage(driver).clickTroubleWithThePolice();
 		PageFactory.getCLAWebProblemPage(driver).clickContinueButton();
 		PageFactory.getCLAWebTroubleWithThePoliceFindLegalAdvisorPage(driver).verifyOnPage();
+	}
+
+
+	public void getCLAWebCheckIfYouCanGetLegalAidStartPageJourney() throws Exception {
+		getCLAWebProblemPageJourney();
+		PageFactory.getCLAWebProblemPage(driver).clickDebt();
+		PageFactory.getCLAWebDebtWhatDoYouNeedHelpWithPage(driver).verifyOnPage();
+		PageFactory.getCLAWebDebtWhatDoYouNeedHelpWithPage(driver).clickBecomingHomeless();
 	}
 	
 }

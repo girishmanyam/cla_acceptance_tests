@@ -10,7 +10,7 @@ public class CLA_WebOutGoingsPage extends SeleniumPage {
 	
 	private String expectedTextOnPage = "Your outgoings";
 	private By expectedTextOnPageSelector = new By.ByXPath(
-			".//*[@id='content']/div[2]/article/h1");
+			".//*[@id='content']/div/article/h1");
 	
 	private By rent = new By.ByXPath(".//*[@id='rent-per_interval_value']");
 	private By maintenance = new By.ByXPath(".//*[@id='maintenance-per_interval_value']");
@@ -19,7 +19,7 @@ public class CLA_WebOutGoingsPage extends SeleniumPage {
 	private By rentPeriod = new By.ByXPath(".//*[@id='rent-interval_period']");
 	private By maintenancePeriod = new By.ByXPath(".//*[@id='maintenance-interval_period']");
 	
-	private By reviewYourAnswersButton = new By.ByXPath(".//*[@id='content']/div[2]/article/form/p/button");
+	private By reviewYourAnswersButton = new By.ByXPath(".//*[@id='content']/div/article/form/p/button");
 	
 	public void setRent(String rent) throws Exception{
 		setText(this.rent,rent);
